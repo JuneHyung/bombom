@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- MenuDAO와 매핑 -->
+<mapper namespace="com.ssafy.bombom.model.dao.MenuDAO">
+
+	<!-- 전체 조회 -->
+	<select id="listMenu" resultType="menu">
+		select *
+		from menu
+		order by menuNo asc
+	</select>
+
+	<!-- 상세 조회 -->
+	<select id="detailMenu" resultType="menu">
+		select *
+		from menu
+		where menuNo = #{menuNo}
+	</select>
+
+	<!-- new목록 -->
+	<select id="newMenuList" resultType="menu">
+		select *
+		from menu
+		where menuNew = 1
+	</select>
+
+	<!-- coffee목록 -->
+	<select id="coffeeMenuList" resultType="menu">
+		select *
+		from menu
+		where menuType = "coffee"
+	</select>
+	<!-- latte 목록 -->
+	<select id="latteMenuList" resultType="menu">
+		select *
+		from menu
+		where menuType = "latte"
+	</select>
+	<!-- smoothie 목록 -->
+	<select id="smoothieMenuList" resultType="menu">
+		select *
+		from menu
+		where menuType = "smoothie"
+	</select>
+	<!-- ade 목록 -->
+	<select id="adeMenuList" resultType="menu">
+		select *
+		from menu
+		where menuType = "ade"
+	</select>
+	<!-- tea목록 -->
+	<select id="teaMenuList" resultType="menu">
+		select *
+		from menu
+		where menuType = "tea"
+	</select>
+	<!-- ade 목록 -->
+	<select id="juiceMenuList" resultType="menu">
+		select *
+		from menu
+		where menuType = "juice"
+	</select>
+	<!-- ade 목록 -->
+	<select id="bubbleMenuList" resultType="menu">
+		select *
+		from menu
+		where menuType = "bubble"
+	</select>
+	<!-- ade 목록 -->
+	<select id="sideMenuList" resultType="menu">
+		select *
+		from menu
+		where menuType = "sidemenu"
+	</select>
+</mapper>
