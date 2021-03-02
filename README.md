@@ -7,7 +7,7 @@ happyhouse를 진행할 때는 jsp로 진행하던 걸 마지막에 vue로 바�
 vue로 모두 작업한 조의 작품을 참고하여 파일구성부터 하나하나 배워가며, 만들어 보았습니다.
 
 # ERD DIAGRAM
-![erd.png](images/erd.jpg)
+![erd.png](images/실행화면/erd.jpg)
 
 
 # 주요 기능
