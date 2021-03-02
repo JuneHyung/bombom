@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- NoticeDAO와 매핑 -->
+<mapper namespace="com.ssafy.bombom.model.dao.NoticeDAO">
+
+	<!-- 전체 조회 -->
+	<select id="listNotice" resultType="notice">
+		select *
+		from notice
+		order by
+		noticeNo asc
+	</select>
+
+	<!-- 상세 조회 -->
+	<select id="detailNotice" resultType="notice">
+		select *
+		from notice
+		where
+		noticeNo = #{noticeNo}
+	</select>
+	<insert id="writeNotice" parameterType="notice">
+		insert into notice(
+		noticeTitle, noticeContent
+		)
+		values(
+		#{noticeTitle}, #{noticeContent})
+	</insert>
+
+	<!-- 조회수 증가 -->
+	<update id="noticeViewUp" parameterType="int">
+		update notice
+		set
+		noticeView = noticeView + 1
+		where noticeNo = #{noticeNo}
+	</update>
+	<!-- 게시글 수정 -->
+	<update id="updateNotice" parameterType="notice">
+		update notice
+		set
+		noticeTitle = #{noticeTitle},
+		noticeContent = #{noticeContent}
+		where
+		noticeNo = #{noticeNo}
+	</update>
+
+	<!-- 게시글 삭제 -->
+	<delete id="deleteNotice" parameterType="int">
+		delete
+		from notice
+		where
+		noticeNo = #{noticeNo}
+	</delete>
+</mapper>
