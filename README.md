@@ -15,6 +15,9 @@ vue로 모두 작업한 조의 작품을 참고하여 파일구성부터 하나�
 ㅇ 참고를 하면서 흐름과, 코드보는방법에 익숙해지기.<br/>
 ㅇ 지도 api 사용해보기
 
+# 소개 보러가기
+http://cjh1114.cafe24.com/bombom/index.html
+
 # ERD DIAGRAM
 ![erd.png](images/실행화면/erd.jpg)
 
