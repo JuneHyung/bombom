@@ -18,7 +18,7 @@ vue로 모두 작업한 조의 작품을 참고하여 파일구성부터 하나�
 # 소개 보러가기
 http://cjh1114.cafe24.com/bombom/index.html
 
-# ERD DIAGRAM
+# ERD
 ![erd.png](images/실행화면/erd.jpg)
 
 
