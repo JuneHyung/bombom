@@ -35,10 +35,12 @@ export const BRAND_CONCEPT = {
 }
 
 export const DAEGU_LOCATION = {
+  title: '본점위치', 
   address: `대구광역시 수성구 달구벌대로 2280(수성동1가 89-42) 4층`
 }
 
 export const DAEJEON_LOCATION = {
+  title: '대전 교육장', 
   address: `대구광역시 수성구 달구벌대로 2280(수성동1가 89-42) 4층`
 }
 
