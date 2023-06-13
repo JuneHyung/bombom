@@ -1,0 +1,19 @@
+.nav-footer{
+  background-color: $anchor-color;
+  color:#fff;
+  text-align: center;
+  font-size: 0.9rem;
+  .footer-info-list{
+    padding:2rem;
+    a{
+      color:#fff;
+      &:hover{
+        color:$point-color;
+        transition: 0.4s all;
+      }
+    }
+  }
+  .last-info-item{
+    padding:2rem;
+  }
+}

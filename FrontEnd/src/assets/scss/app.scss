@@ -1,6 +1,10 @@
 @import './font.scss';
 @import './variable.scss';
 @import './common.scss';
+
+@import './common/navHeader.scss';
+@import './common/navFooter.scss';
+
 *{
   box-sizing: inherit;
   font-family: $font-NanumSqaureRound, sans-serif;
@@ -33,7 +37,14 @@ img {
 }
 a {
   text-decoration: none;
+  color:$anchor-color;
+  font-weight:900;
 }
+
+hr{
+  margin:0;
+}
+
 ul,
 li,
 ol {
@@ -68,6 +79,11 @@ p {
 .ellipsis-3 {
   @include ellipsis(3, 1.3em);
 }
+.app-wrapper{
+  display:flex;
+  flex-direction: column;
+}
+
 
 // .placeholder{
 //   color:$input-border-color; 

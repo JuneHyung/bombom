@@ -1,0 +1,47 @@
+.nav-header{
+  .nav-list{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: $point-color;
+    .nav-item{
+      flex: 1 0 100px;
+      align-items: center;
+      transition:0.4s all;
+      height:60px;
+      padding: 0.5rem;
+      cursor:pointer;
+      
+      a{
+        width:100%;
+        height:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      &:hover{
+        background-color:$hover-color;
+        a{color:#fff; }
+      }
+    }
+    .nav-after-list{
+      display: flex;
+      flex:10;
+    }
+    .logo-img{
+      display:flex;
+      justify-content: flex-start;
+      flex:1;
+      background-image:url('@/assets/images/logo.png');
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      &:hover{
+        background-color:$point-color;
+      }
+    }
+  }
+}

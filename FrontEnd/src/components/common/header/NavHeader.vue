@@ -1,16 +1,18 @@
 <template>
-  <header>
-    <ul>
-      <li>
-        <RouterLink to="/"><p>로고</p></RouterLink>
+  <header class="nav-header">
+    <nav class="nav-list">
+      <li class="nav-item logo-img">
+        <RouterLink :to="{name: 'Main'}" ></RouterLink>
       </li>
+      <ul class="nav-after-list">
       <template v-for="(item, idx) in FIXED_MENU_LIST" :key="idx">
-        <li>
-          <RouterLink :to="item.path">{{item.label}}</RouterLink>
+        <li class="nav-item">
+          <RouterLink :to="{name: item.name}">{{item.label}}</RouterLink>
         </li>
       </template>
-      <changeableItemByLogIn></changeableItemByLogIn>
+      <changeableItemByLogIn class="nav-item"></changeableItemByLogIn>
     </ul>
+    </nav>
   </header>
 </template>
 <script setup>
