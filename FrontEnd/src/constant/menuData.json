@@ -8,7 +8,7 @@
         "menuPrice": 1800,
         "menuType": "coffee",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/coffee/menu01_img01.png",
+        "menuImg": "@/assets/images/menu/coffee/menu01_img01.png"
       },
       {
         "menuNo": 2,
@@ -16,7 +16,7 @@
         "menuPrice": 1800,
         "menuType": "coffee",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/coffee/menu01_img02.png",
+        "menuImg": "@/assets/images/menu/coffee/menu01_img02.png"
       },
       {
         "menuNo": 3,
@@ -24,7 +24,7 @@
         "menuPrice": 1800,
         "menuType": "coffee",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/coffee/menu01_img03.png",
+        "menuImg": "@/assets/images/menu/coffee/menu01_img03.png"
       },
       {
         "menuNo": 4,
@@ -32,7 +32,7 @@
         "menuPrice": 1800,
         "menuType": "coffee",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/coffee/menu01_img04.png",
+        "menuImg": "@/assets/images/menu/coffee/menu01_img04.png"
       },
       {
         "menuNo": 5,
@@ -40,7 +40,7 @@
         "menuPrice": 1800,
         "menuType": "coffee",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/coffee/menu01_img05.png",
+        "menuImg": "@/assets/images/menu/coffee/menu01_img05.png"
       },
       {
         "menuNo": 6,
@@ -48,7 +48,7 @@
         "menuPrice": 1800,
         "menuType": "coffee",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/coffee/menu01_img06.png",
+        "menuImg": "@/assets/images/menu/coffee/menu01_img06.png"
       },
       {
         "menuNo": 7,
@@ -56,7 +56,7 @@
         "menuPrice": 1800,
         "menuType": "coffee",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/coffee/menu01_img07.png",
+        "menuImg": "@/assets/images/menu/coffee/menu01_img07.png"
       },
       {
         "menuNo": 8,
@@ -64,7 +64,7 @@
         "menuPrice": 1800,
         "menuType": "coffee",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/coffee/menu01_img08.png",
+        "menuImg": "@/assets/images/menu/coffee/menu01_img08.png"
       },
       {
         "menuNo": 9,
@@ -72,7 +72,7 @@
         "menuPrice": 1800,
         "menuType": "coffee",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/coffee/menu01_img09.png",
+        "menuImg": "@/assets/images/menu/coffee/menu01_img09.png"
       },
       {
         "menuNo":10,
@@ -80,7 +80,7 @@
         "menuPrice": 1800,
         "menuType": "coffee",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/coffee/menu01_img10.png",
+        "menuImg": "@/assets/images/menu/coffee/menu01_img10.png"
       },
       {
         "menuNo":11,
@@ -88,8 +88,8 @@
         "menuPrice": 1800,
         "menuType": "coffee",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/coffee/menu01_img11.png",
-      },
+        "menuImg": "@/assets/images/menu/coffee/menu01_img11.png"
+      }
     ]
   },  
   
@@ -102,7 +102,7 @@
         "menuPrice": 1800,
         "menuType": "latte",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/latte/menu02_img01.png",
+        "menuImg": "@/assets/images/menu/latte/menu02_img01.png"
       },
       {
         "menuNo": 2,
@@ -110,7 +110,7 @@
         "menuPrice": 1800,
         "menuType": "latte",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/latte/menu02_img02.png",
+        "menuImg": "@/assets/images/menu/latte/menu02_img02.png"
       },
       {
         "menuNo": 3,
@@ -118,7 +118,7 @@
         "menuPrice": 1800,
         "menuType": "latte",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/latte/menu02_img03.png",
+        "menuImg": "@/assets/images/menu/latte/menu02_img03.png"
       },
       {
         "menuNo": 4,
@@ -126,7 +126,7 @@
         "menuPrice": 1800,
         "menuType": "latte",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/latte/menu02_img04.png",
+        "menuImg": "@/assets/images/menu/latte/menu02_img04.png"
       },
       {
         "menuNo": 5,
@@ -134,7 +134,7 @@
         "menuPrice": 1800,
         "menuType": "latte",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/latte/menu02_img05.png",
+        "menuImg": "@/assets/images/menu/latte/menu02_img05.png"
       },
       {
         "menuNo": 6,
@@ -142,7 +142,7 @@
         "menuPrice": 1800,
         "menuType": "latte",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/latte/menu02_img06.png",
+        "menuImg": "@/assets/images/menu/latte/menu02_img06.png"
       },
       {
         "menuNo": 7,
@@ -150,7 +150,7 @@
         "menuPrice": 1800,
         "menuType": "latte",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/latte/menu02_img07.png",
+        "menuImg": "@/assets/images/menu/latte/menu02_img07.png"
       },
       {
         "menuNo": 8,
@@ -158,7 +158,7 @@
         "menuPrice": 1800,
         "menuType": "latte",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/latte/menu02_img08.png",
+        "menuImg": "@/assets/images/menu/latte/menu02_img08.png"
       },
       {
         "menuNo": 9,
@@ -166,7 +166,7 @@
         "menuPrice": 1800,
         "menuType": "latte",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/latte/menu02_img09.png",
+        "menuImg": "@/assets/images/menu/latte/menu02_img09.png"
       },
       {
         "menuNo":10,
@@ -174,7 +174,7 @@
         "menuPrice": 1800,
         "menuType": "latte",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/latte/menu02_img10.png",
+        "menuImg": "@/assets/images/menu/latte/menu02_img10.png"
       },
       {
         "menuNo":11,
@@ -182,8 +182,8 @@
         "menuPrice": 1800,
         "menuType": "latte",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/latte/menu02_img11.png",
-      },
+        "menuImg": "@/assets/images/menu/latte/menu02_img11.png"
+      }
     ]
   },  
   {
@@ -195,7 +195,7 @@
         "menuPrice": 1800,
         "menuType": "smootie",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/smootie/menu03_img01.png",
+        "menuImg": "@/assets/images/menu/smootie/menu03_img01.png"
       },
       {
         "menuNo": 2,
@@ -203,7 +203,7 @@
         "menuPrice": 1800,
         "menuType": "smootie",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/smootie/menu03_img02.png",
+        "menuImg": "@/assets/images/menu/smootie/menu03_img02.png"
       },
       {
         "menuNo": 3,
@@ -211,7 +211,7 @@
         "menuPrice": 1800,
         "menuType": "smootie",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/smootie/menu03_img03.png",
+        "menuImg": "@/assets/images/menu/smootie/menu03_img03.png"
       },
       {
         "menuNo": 4,
@@ -219,7 +219,7 @@
         "menuPrice": 1800,
         "menuType": "smootie",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/smootie/menu03_img04.png",
+        "menuImg": "@/assets/images/menu/smootie/menu03_img04.png"
       },
       {
         "menuNo": 5,
@@ -227,7 +227,7 @@
         "menuPrice": 1800,
         "menuType": "smootie",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/smootie/menu03_img05.png",
+        "menuImg": "@/assets/images/menu/smootie/menu03_img05.png"
       },
       {
         "menuNo": 6,
@@ -235,7 +235,7 @@
         "menuPrice": 1800,
         "menuType": "smootie",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/smootie/menu03_img06.png",
+        "menuImg": "@/assets/images/menu/smootie/menu03_img06.png"
       },
       {
         "menuNo": 7,
@@ -243,7 +243,7 @@
         "menuPrice": 1800,
         "menuType": "smootie",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/smootie/menu03_img07.png",
+        "menuImg": "@/assets/images/menu/smootie/menu03_img07.png"
       },
       {
         "menuNo": 8,
@@ -251,7 +251,7 @@
         "menuPrice": 1800,
         "menuType": "smootie",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/smootie/menu03_img08.png",
+        "menuImg": "@/assets/images/menu/smootie/menu03_img08.png"
       },
       {
         "menuNo": 9,
@@ -259,7 +259,7 @@
         "menuPrice": 1800,
         "menuType": "smootie",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/smootie/menu03_img09.png",
+        "menuImg": "@/assets/images/menu/smootie/menu03_img09.png"
       },
       {
         "menuNo":10,
@@ -267,7 +267,7 @@
         "menuPrice": 1800,
         "menuType": "smootie",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/smootie/menu03_img10.png",
+        "menuImg": "@/assets/images/menu/smootie/menu03_img10.png"
       },
       {
         "menuNo":11,
@@ -275,8 +275,8 @@
         "menuPrice": 1800,
         "menuType": "smootie",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/smootie/menu03_img11.png",
-      },
+        "menuImg": "@/assets/images/menu/smootie/menu03_img11.png"
+      }
     ]
   },  
   {
@@ -288,7 +288,7 @@
         "menuPrice": 1800,
         "menuType": "ade",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/ade/menu04_img01.png",
+        "menuImg": "@/assets/images/menu/ade/menu04_img01.png"
       },
       {
         "menuNo": 2,
@@ -296,7 +296,7 @@
         "menuPrice": 1800,
         "menuType": "ade",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/ade/menu04_img02.png",
+        "menuImg": "@/assets/images/menu/ade/menu04_img02.png"
       },
       {
         "menuNo": 3,
@@ -304,7 +304,7 @@
         "menuPrice": 1800,
         "menuType": "ade",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/ade/menu04_img03.png",
+        "menuImg": "@/assets/images/menu/ade/menu04_img03.png"
       },
       {
         "menuNo": 4,
@@ -312,7 +312,7 @@
         "menuPrice": 1800,
         "menuType": "ade",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/ade/menu04_img04.png",
+        "menuImg": "@/assets/images/menu/ade/menu04_img04.png"
       },
       {
         "menuNo": 5,
@@ -320,7 +320,7 @@
         "menuPrice": 1800,
         "menuType": "ade",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/ade/menu04_img05.png",
+        "menuImg": "@/assets/images/menu/ade/menu04_img05.png"
       },
       {
         "menuNo": 6,
@@ -328,7 +328,7 @@
         "menuPrice": 1800,
         "menuType": "ade",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/ade/menu04_img06.png",
+        "menuImg": "@/assets/images/menu/ade/menu04_img06.png"
       },
       {
         "menuNo": 7,
@@ -336,7 +336,7 @@
         "menuPrice": 1800,
         "menuType": "ade",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/ade/menu04_img07.png",
+        "menuImg": "@/assets/images/menu/ade/menu04_img07.png"
       },
       {
         "menuNo": 8,
@@ -344,7 +344,7 @@
         "menuPrice": 1800,
         "menuType": "ade",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/ade/menu04_img08.png",
+        "menuImg": "@/assets/images/menu/ade/menu04_img08.png"
       },
       {
         "menuNo": 9,
@@ -352,7 +352,7 @@
         "menuPrice": 1800,
         "menuType": "ade",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/ade/menu04_img09.png",
+        "menuImg": "@/assets/images/menu/ade/menu04_img09.png"
       },
       {
         "menuNo":10,
@@ -360,7 +360,7 @@
         "menuPrice": 1800,
         "menuType": "ade",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/ade/menu04_img10.png",
+        "menuImg": "@/assets/images/menu/ade/menu04_img10.png"
       },
       {
         "menuNo":11,
@@ -368,8 +368,8 @@
         "menuPrice": 1800,
         "menuType": "ade",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/ade/menu04_img11.png",
-      },
+        "menuImg": "@/assets/images/menu/ade/menu04_img11.png"
+      }
     ]
   },  
   {
@@ -381,7 +381,7 @@
         "menuPrice": 1800,
         "menuType": "tea",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/tea/menu05_img01.png",
+        "menuImg": "@/assets/images/menu/tea/menu05_img01.png"
       },
       {
         "menuNo": 2,
@@ -389,7 +389,7 @@
         "menuPrice": 1800,
         "menuType": "tea",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/tea/menu05_img02.png",
+        "menuImg": "@/assets/images/menu/tea/menu05_img02.png"
       },
       {
         "menuNo": 3,
@@ -397,7 +397,7 @@
         "menuPrice": 1800,
         "menuType": "tea",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/tea/menu05_img03.png",
+        "menuImg": "@/assets/images/menu/tea/menu05_img03.png"
       },
       {
         "menuNo": 4,
@@ -405,7 +405,7 @@
         "menuPrice": 1800,
         "menuType": "tea",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/tea/menu05_img04.png",
+        "menuImg": "@/assets/images/menu/tea/menu05_img04.png"
       },
       {
         "menuNo": 5,
@@ -413,7 +413,7 @@
         "menuPrice": 1800,
         "menuType": "tea",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/tea/menu05_img05.png",
+        "menuImg": "@/assets/images/menu/tea/menu05_img05.png"
       },
       {
         "menuNo": 6,
@@ -421,7 +421,7 @@
         "menuPrice": 1800,
         "menuType": "tea",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/tea/menu05_img06.png",
+        "menuImg": "@/assets/images/menu/tea/menu05_img06.png"
       },
       {
         "menuNo": 7,
@@ -429,7 +429,7 @@
         "menuPrice": 1800,
         "menuType": "tea",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/tea/menu05_img07.png",
+        "menuImg": "@/assets/images/menu/tea/menu05_img07.png"
       },
       {
         "menuNo": 8,
@@ -437,7 +437,7 @@
         "menuPrice": 1800,
         "menuType": "tea",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/tea/menu05_img08.png",
+        "menuImg": "@/assets/images/menu/tea/menu05_img08.png"
       },
       {
         "menuNo": 9,
@@ -445,7 +445,7 @@
         "menuPrice": 1800,
         "menuType": "tea",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/tea/menu05_img09.png",
+        "menuImg": "@/assets/images/menu/tea/menu05_img09.png"
       },
       {
         "menuNo":10,
@@ -453,7 +453,7 @@
         "menuPrice": 1800,
         "menuType": "tea",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/tea/menu05_img10.png",
+        "menuImg": "@/assets/images/menu/tea/menu05_img10.png"
       },
       {
         "menuNo":11,
@@ -461,8 +461,8 @@
         "menuPrice": 1800,
         "menuType": "tea",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/tea/menu05_img11.png",
-      },
+        "menuImg": "@/assets/images/menu/tea/menu05_img11.png"
+      }
     ]
   },  
   {
@@ -474,7 +474,7 @@
         "menuPrice": 1800,
         "menuType": "juice",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/juice/menu06_img01.png",
+        "menuImg": "@/assets/images/menu/juice/menu06_img01.png"
       },
       {
         "menuNo": 2,
@@ -482,7 +482,7 @@
         "menuPrice": 1800,
         "menuType": "juice",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/juice/menu06_img02.png",
+        "menuImg": "@/assets/images/menu/juice/menu06_img02.png"
       },
       {
         "menuNo": 3,
@@ -490,7 +490,7 @@
         "menuPrice": 1800,
         "menuType": "juice",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/juice/menu06_img03.png",
+        "menuImg": "@/assets/images/menu/juice/menu06_img03.png"
       },
       {
         "menuNo": 4,
@@ -498,7 +498,7 @@
         "menuPrice": 1800,
         "menuType": "juice",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/juice/menu06_img04.png",
+        "menuImg": "@/assets/images/menu/juice/menu06_img04.png"
       },
       {
         "menuNo": 5,
@@ -506,7 +506,7 @@
         "menuPrice": 1800,
         "menuType": "juice",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/juice/menu06_img05.png",
+        "menuImg": "@/assets/images/menu/juice/menu06_img05.png"
       },
       {
         "menuNo": 6,
@@ -552,8 +552,7 @@
         "menuType": "bubble",
         "menuNew": false,
         "menuImg": "@/assets/images/menu/bubble/menu07_img04.png"
-      }
-      
+      } 
     ]
   },  
   {
@@ -653,7 +652,7 @@
         "menuPrice": 1800,
         "menuType": "juice",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/juice/menu06_img01.png",
+        "menuImg": "@/assets/images/menu/juice/menu06_img01.png"
       },
       {
         "menuNo": 2,
@@ -661,7 +660,7 @@
         "menuPrice": 1800,
         "menuType": "juice",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/juice/menu06_img02.png",
+        "menuImg": "@/assets/images/menu/juice/menu06_img02.png"
       },
       {
         "menuNo": 3,
@@ -669,7 +668,7 @@
         "menuPrice": 1800,
         "menuType": "juice",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/juice/menu06_img03.png",
+        "menuImg": "@/assets/images/menu/juice/menu06_img03.png"
       },
       {
         "menuNo": 4,
@@ -677,7 +676,7 @@
         "menuPrice": 1800,
         "menuType": "juice",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/juice/menu06_img04.png",
+        "menuImg": "@/assets/images/menu/juice/menu06_img04.png"
       },
       {
         "menuNo": 5,
@@ -685,7 +684,7 @@
         "menuPrice": 1800,
         "menuType": "juice",
         "menuNew": false,
-        "menuImg": "@/assets/images/menu/juice/menu06_img05.png",
+        "menuImg": "@/assets/images/menu/juice/menu06_img05.png"
       },
       {
         "menuNo": 6,
@@ -732,7 +731,6 @@
         "menuNew": false,
         "menuImg": "@/assets/images/menu/bubble/menu07_img04.png"
       }
-      
     ]
   },  
   {
@@ -969,7 +967,7 @@
         "menuType": "sidemenu",
         "menuNew": false,
         "menuImg": "@/assets/images/menu/sidemenu/menu08_img29.png"
-      },
+      }
     ]
   }
 ]
