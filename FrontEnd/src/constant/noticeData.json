@@ -1,0 +1,79 @@
+[
+    {
+      "noticeNo": 1,
+      "noticeTitle": "공지사항 01번 입니다.",
+      "noticeContent": "공지사항 01번 내용 입니다.",
+      "noticeView": 1,
+      "noticeDate": "2022-05-05"
+    },
+    {
+      "noticeNo": 2,
+      "noticeTitle": "공지사항 02번 입니다.",
+      "noticeContent": "공지사항 02번 내용 입니다.",
+      "noticeView": 1,
+      "noticeDate": "2022-05-05"
+    },
+    {
+      "noticeNo": 3,
+      "noticeTitle": "공지사항 03번 입니다.",
+      "noticeContent": "공지사항 03번 내용 입니다.",
+      "noticeView": 1,
+      "noticeDate": "2022-05-05"
+    },
+    {
+      "noticeNo": 4,
+      "noticeTitle": "공지사항 04번 입니다.",
+      "noticeContent": "공지사항 04번 내용 입니다.",
+      "noticeView": 1,
+      "noticeDate": "2022-05-05"
+    },
+    {
+      "noticeNo": 5,
+      "noticeTitle": "공지사항 05번 입니다.",
+      "noticeContent": "공지사항 05번 내용 입니다.",
+      "noticeView": 1,
+      "noticeDate": "2022-05-05"
+    },
+    {
+      "noticeNo": 6,
+      "noticeTitle": "공지사항 06번 입니다.",
+      "noticeContent": "공지사항 06번 내용 입니다.",
+      "noticeView": 1,
+      "noticeDate": "2022-05-05"
+    },
+    {
+      "noticeNo": 7,
+      "noticeTitle": "공지사항 07번 입니다.",
+      "noticeContent": "공지사항 07번 내용 입니다.",
+      "noticeView": 1,
+      "noticeDate": "2022-05-05"
+    },
+    {
+      "noticeNo": 8,
+      "noticeTitle": "공지사항 08번 입니다.",
+      "noticeContent": "공지사항 08번 내용 입니다.",
+      "noticeView": 1,
+      "noticeDate": "2022-05-05"
+    },
+    {
+      "noticeNo": 9,
+      "noticeTitle": "공지사항 09번 입니다.",
+      "noticeContent": "공지사항 09번 내용 입니다.",
+      "noticeView": 1,
+      "noticeDate": "2022-05-05"
+    },
+    {
+      "noticeNo":10,
+      "noticeTitle": "공지사항 10번 입니다.",
+      "noticeContent": "공지사항 10번 내용 입니다.",
+      "noticeView": 1,
+      "noticeDate": "2022-05-05"
+    },
+    {
+      "noticeNo":11,
+      "noticeTitle": "공지사항 11번 입니다.",
+      "noticeContent": "공지사항 11번 내용 입니다.",
+      "noticeView": 1,
+      "noticeDate": "2022-05-05"
+    }
+]
