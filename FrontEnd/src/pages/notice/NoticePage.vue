@@ -1,31 +1,62 @@
 <template>
-  <div>
-    <p>공지사항 페이지 입니다.</p>
-    <button>등록</button>
-  </div>
-  <table>
-    <thead>
-      <th>글 번호</th>
-      <th>제목</th>
-      <th>작성일</th>
-      <th>조회수</th>
-      <th>Actions</th>
-    </thead>
-    <tbody>
-      <template v-for="(item) in noticeList" :key="item">
-        <tr>
-          <td>{{ item.noticeNo }}</td>
-          <td>{{ item.noticeTitle }}</td>
-          <td>{{ item.noticeDate }}</td>
-          <td>{{ item.noticeView }}</td>
-          <td>수정, 삭제</td>
+  <div class="notice-wrap">
+    <div class="notice-title-wrap">
+      <h1>공지사항</h1>
+      <button class="notice-edit-button">등록</button>
+    </div>
+    <table>
+      <thead>
+        <template v-for="(hLabel, idx) in headLabelList" :key="idx">
+          <th>{{ hLabel }}</th>
+        </template>
+      </thead>
+      <tbody v-if="noticeList.length!==0">
+        <template v-for="item in noticeList" :key="item">
+          <tr>
+            <td>{{ item.noticeNo }}</td>
+            <td>{{ item.noticeTitle }}</td>
+            <td>{{ item.noticeDate }}</td>
+            <td>{{ item.noticeView }}</td>
+            <td>
+              <button>보기</button>
+              <button>수정</button>
+              <button>삭제</button>
+            </td>
+          </tr>
+        </template>
+      </tbody>
+      <tbody v-else>
+        <tr class="no-data-row">
+          <td colspan=5>No Data Sorry</td>
         </tr>
+      </tbody>
+    </table>
+    <ul class="pagenate-list">
+      <li class="pagenate-item" @click="changeCurIdx(curIdx-1)">prev</li>
+      <template v-for="(num, idx) in numList" :key="idx">
+        <li class="pagenate-item" :class="{'active-number': idx===curIdx}" @click="changeCurIdx(idx)">{{ num }}</li>
       </template>
-    </tbody>
-  </table>
+      <li class="pagenate-item" @click="changeCurIdx(curIdx+1)">next</li>
+    </ul>
+  </div>
 </template>
 
 <script setup>
 import noticeData from '@/constant/noticeData.json'
-const noticeList = noticeData;
+import { computed, onMounted, ref } from 'vue';
+const curIdx = ref(0);
+const maxCnt = 10;
+
+const noticeList = computed(()=> curIdx.value*maxCnt+maxCnt<=noticeData.length ? noticeData.slice(curIdx.value*maxCnt, maxCnt) : noticeData.slice(curIdx.value*maxCnt));
+// const noticeList = [];
+const changeCurIdx = (idx) => {
+  curIdx.value =idx
+  console.log(curIdx.value)
+}
+const headLabelList = ['글 번호', '제목', '작성일', '조회수', 'Actions']
+const numList = ref([]);
+onMounted(()=>{
+  const num = Math.ceil(noticeData.length/maxCnt)
+  numList.value = Array.from({length: num},(_,i)=>i+1)
+})
 </script>
