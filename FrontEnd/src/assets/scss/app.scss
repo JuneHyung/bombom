@@ -5,6 +5,7 @@
 @import './common/navHeader.scss';
 @import './common/navFooter.scss';
 
+@import './main/main.scss';
 *{
   box-sizing: inherit;
   font-family: $font-NanumSqaureRound, sans-serif;
@@ -83,7 +84,6 @@ p {
   display:flex;
   flex-direction: column;
 }
-
 
 // .placeholder{
 //   color:$input-border-color; 

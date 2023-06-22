@@ -15,7 +15,7 @@ export const ABOUT_BOMBOM = {
   시장에서는 빠질 수 없는 카페로 인정받았습니다. 'Cafe 봄봄'은 현재에도 끊임없는 메뉴개발과
   노력으로 성장을 거듭하고 있습니다`
   ],
-  introduceImg: `@/assets/images/introduce01.png`
+  introduceImg: `src/assets/images/introduce01.png`
 }
 
 export const BRAND_CONCEPT = {
@@ -31,7 +31,7 @@ export const BRAND_CONCEPT = {
     `친절함과 발랄함이 돋보이는 분위기`,
     `꽃처럼 화려한 비주얼의 음료`
   ],
-  introduceImg: `@/assets/images/introduce02.png`
+  introduceImg: `src/assets/images/introduce02.png`
 }
 
 export const DAEGU_LOCATION = {
@@ -51,5 +51,5 @@ export const INTRODUCE_BOMBOM = {
     `take-out 시장이 커지면서 ‘Cafe 봄봄’은 이제 대학가를 넘어 중심가,`,
     `주택가 곳곳에서 한층 더 성장하고 있습니다. 앞으로도 Cafe 봄봄은 차별화를 추구하여 보다 성장하는 브랜드가 되도록 최선을 다하겠습니다.`
   ],
-  introduceImg: `@/assets/images/section01.png`
+  introduceImg: `src/assets/images/section01.png`
 }

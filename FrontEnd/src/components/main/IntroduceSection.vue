@@ -1,6 +1,6 @@
 <template>
-  <section>
+  <div class="content-wrap">
     <slot name="left-pannel"></slot>
     <slot name="right-pannel"></slot>
-  </section>
+  </div>
 </template>

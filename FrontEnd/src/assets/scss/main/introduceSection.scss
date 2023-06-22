@@ -1,0 +1,29 @@
+
+  .content-wrap{
+    width:75%;
+    display:flex;
+    flex-direction: row;
+    margin: 2rem 0;
+    .text-pannel{
+      display:flex;
+      flex:7;
+      flex-direction:column;
+      padding: 1.5rem;
+      // border:1px solid black;
+      h1{
+        margin-bottom:1.25rem;
+      }
+      .text-content01, .text-content02{
+        h2{margin: 0.8rem 0;}
+      }
+      .text-content02{
+        margin-top: 2.3rem;
+      }
+    }
+    .image-pannel, .map-pannel{
+      display: flex;
+      flex:5;
+      justify-content: center;
+      align-items: center;
+    }
+  }

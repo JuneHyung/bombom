@@ -1,0 +1,9 @@
+.introduce-outter-wrap{
+  display:flex;
+  flex:1;
+  width:100%;
+  flex-direction: column;
+  align-items: center;
+  // justify-content:center;
+  background:url('src/assets/images/blossom.gif') no-repeat;
+}
