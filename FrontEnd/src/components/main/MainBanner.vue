@@ -10,20 +10,24 @@
   </ul>
 </template>
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 const props = defineProps({
   bannerList: Array
 })
 const curIdx = ref(0)
 
-const countCurIdx = () => {
-  setInterval(() => {
-    curIdx.value = curIdx.value < props.bannerList.length - 1 ? curIdx.value + 1 : 0
-  }, 3000)
-}
+let countCurIdx = null;
+
 onMounted(() => {
-  countCurIdx()
+  countCurIdx = setInterval(() => {
+    curIdx.value = curIdx.value < props.bannerList.length - 1 ? curIdx.value + 1 : curIdx.value-props.bannerList.length+1;
+  }, 3000)
 })
+onBeforeUnmount(()=>{
+  clearInterval(countCurIdx);
+})
+
+
 </script>
 <style scoped lang="scss">
 
