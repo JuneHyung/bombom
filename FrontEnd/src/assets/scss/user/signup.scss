@@ -1,0 +1,71 @@
+.signup-form-wrap{
+  display:flex;
+  justify-content: center;
+  align-items: stretch;
+  padding:2.5rem;
+  .signup-content-box{
+    display:flex;
+    flex-direction:column;
+    flex: 0 1 500px;
+    
+    .signup-title-box{
+      display:flex;
+      background-color:$anchor-color;
+      color:$white-color;
+      padding:1.2rem;
+    }
+    .signup-form-box{
+      border-radius: 0 0 20px 20px;
+      display:flex;
+      flex-direction: column;
+      padding: 1.2rem;
+      border:1px solid $hover-color;
+      .id-wrap, .pw-wrap, .name-wrap, .email-wrap, .address-wrap, .tel-wrap,.button-wrap{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+        margin:1rem 0;
+        color:$hover-color;
+        .id-label,.pw-label, .name-label, .email-label, .address-label, .tel-label{
+          display:flex;
+          flex:3;
+        }
+        .id-input,.pw-input, .name-input, .email-input, .address-input, .tel-input{
+          display:flex;
+          flex:9;
+          height:40px;
+          border-radius:5px;
+          color:$hover-color;
+          border: 1px solid $hover-color;
+          &:focus{
+            outline-color:$hover-color;
+          }
+        }
+      }
+      .button-wrap{
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom:0;
+        .cancel-button, .reset-button, .signup-button{
+          width:80px;
+          height:40px;
+          border:none;
+          background-color:$point-color;
+          padding:0.12rem;
+          border-radius: 1.25rem;
+          transition:all 0.4s;
+          cursor:pointer;
+          &:hover{
+            // background-color:$hover-color;
+            background-color:$anchor-color;
+            color:$white-color;
+          }
+        }
+        .reset-button{
+          margin: 0 0.25rem;
+        }
+      }
+    }
+  }
+}
