@@ -4,6 +4,7 @@ import MenuPage from '@/pages/menu/MenuPage.vue';
 import NoticePage from '@/pages/notice/NoticePage.vue';
 import FindPage from '@/pages/find/FindPage.vue';
 import LoginPage from '@/pages/user/LoginPage.vue';
+import SignupPage from '@/pages/user/SignupPage.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,7 +34,11 @@ const router = createRouter({
       name: 'Login',
       component: LoginPage
     },
-
+    {
+      path: '/signup',
+      name: 'Signup',
+      component: SignupPage,
+    },
   ]
 })
 
