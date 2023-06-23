@@ -34,15 +34,20 @@ export const BRAND_CONCEPT = {
   introduceImg: `src/assets/images/introduce02.png`
 }
 
-export const DAEGU_LOCATION = {
+export const DAEGU_LOCATION = [{
   title: '본점위치', 
   address: `대구광역시 수성구 달구벌대로 2280(수성동1가 89-42) 4층`
+},
+{
+  title: 'test용 오쏘카페',
+  address: `대구광역시 수성구 달구벌대로 2274`
 }
+]
 
-export const DAEJEON_LOCATION = {
+export const DAEJEON_LOCATION = [{
   title: '대전 교육장', 
   address: `대구광역시 수성구 달구벌대로 2280(수성동1가 89-42) 4층`
-}
+}]
 
 export const INTRODUCE_BOMBOM = {
   title: `Cafe 봄봄은 take-out 전문 카페로 출발하였습니다.`,
