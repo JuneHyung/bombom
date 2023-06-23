@@ -18,9 +18,9 @@
             <td>{{ item.noticeDate }}</td>
             <td>{{ item.noticeView }}</td>
             <td>
-              <button>보기</button>
-              <button>수정</button>
-              <button>삭제</button>
+              <MdiIcon name="mdi-eye-outline"></MdiIcon>
+              <MdiIcon name="mdi-pencil" class="bb-mx-sm"></MdiIcon>
+              <MdiIcon name="mdi-trash-can-outline"></MdiIcon>
             </td>
           </tr>
         </template>
@@ -42,7 +42,8 @@
 </template>
 
 <script setup>
-import noticeData from '@/constant/noticeData.json'
+import MdiIcon from '@/components/common/MdiIcon.vue';
+import noticeData from '@/constant/noticeData.json';
 import { computed, onMounted, ref } from 'vue';
 const curIdx = ref(0);
 const maxCnt = 10;
