@@ -2,7 +2,7 @@
 
 # dependencies
 */node_modules
-Backend/config/*
+Backend/config/
 
 # production
 /build
