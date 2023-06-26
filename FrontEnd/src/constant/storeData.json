@@ -1,48 +1,48 @@
 [
   {
-    "shopNo": 1,
+    "id": 1,
     "locName": "서울",
     "shopName": "서울 연신내점",
     "shopTel": "02-353-1888",
     "shopAddress": "서울특별시 은평구 연서로29길 4"
   },
   {
-    "shopNo": 2,
+    "id": 2,
     "locName": "서울",
     "shopName": "서울 선릉점(직영)",
     "shopTel": "02-256-9210",
     "shopAddress": "서울특별시 강남구 선릉로 424(대치동) 1층 106호"
   },
   {
-    "shopNo": 3,
+    "id": 3,
     "locName": "서울",
     "shopName": "서울 잠실새내역점(직영)",
     "shopTel": "02-416-9001",
     "shopAddress": "서울특별시 송파구 백제고분로7길 53(잠실동) 1층"
   },
   {
-    "shopNo": 4,
+    "id": 4,
     "locName": "서울",
     "shopName": "서울대입구역점",
     "shopTel": "02-2135-1626",
     "shopAddress": "서울시 관악구 관악로 16길 26"
   },
   {
-    "shopNo": 5,
+    "id": 5,
     "locName": "서울",
     "shopName": "마포프레스티지점",
     "shopTel": "02-706-0186",
     "shopAddress": "서울특별시 마포구 대흥로 164(염리동) F동 103호 (마포프레스티지자이 근린생활시설)"
   },
   {
-    "shopNo": 6,
+    "id": 6,
     "locName": "서울",
     "shopName": "이화여대점+",
     "shopTel": "070-8881-1224",
     "shopAddress": "서울특별시 서대문구 이화여대길 7, 1층(대현동)"
   },
   {
-    "shopNo": 7,
+    "id": 7,
     "locName": "서울",
     "shopName": "숭실대점",
     "shopTel": "02-816-6700",
@@ -50,14 +50,14 @@
   },
   
   {
-    "shopNo": 8,
+    "id": 8,
     "locName": "강원",
     "shopName": "춘천근화점",
     "shopTel": "",
     "shopAddress": "강원도 춘천시 당간지주길 74, 1층"
   },
   {
-    "shopNo": 9,
+    "id": 9,
     "locName": "강원",
     "shopName": "강원횡성점",
     "shopTel": "033-342-1711",
@@ -65,154 +65,154 @@
   },
 
   {
-    "shopNo": 10,
+    "id": 10,
     "locName": "대전",
     "shopName": "대전 신탄진점",
     "shopTel": "042-935-0312",
     "shopAddress": "대전광역시 대덕구 대청로 36(신탄진동) 1층"
   },
   {
-    "shopNo": 11,
+    "id": 11,
     "locName": "대전",
     "shopName": "대전 터미널점",
     "shopTel": "042-625-2958",
     "shopAddress": "대전광역시 동구 동서대로 1713(용전동) 1층"
   },
   {
-    "shopNo": 12,
+    "id": 12,
     "locName": "대전",
     "shopName": "대덕구청점",
     "shopTel": "042-625-7875",
     "shopAddress": "대전광역시 대덕구 한남로137번길 31(오정동) 1층"
   },
   {
-    "shopNo": 13,
+    "id": 13,
     "locName": "대전",
     "shopName": "배제대점",
     "shopTel": "042-535-0137",
     "shopAddress": "대전광역시 서구 배재로 168 (도마동)"
   },
   {
-    "shopNo": 14,
+    "id": 14,
     "locName": "대전",
     "shopName": "대전테크노밸리점",
     "shopTel": "042-336-7770",
     "shopAddress": "대전 유성구 테크노3로 77, A동 1층 105호(관평동)"
   },
   {
-    "shopNo": 15,
+    "id": 15,
     "locName": "대전",
     "shopName": "대전관평점",
     "shopTel": "042-935-6555",
     "shopAddress": "대전광역시 유성구 관평2로 22, 1층 102호(관평동)"
   },
   {
-    "shopNo": 16,
+    "id": 16,
     "locName": "대전",
     "shopName": "충남대점",
     "shopTel": "042-822-0966",
     "shopAddress": "대전광역시 유성구 궁동 409-8"
   },
   {
-    "shopNo": 17,
+    "id": 17,
     "locName": "대전",
     "shopName": "둔산점",
     "shopTel": "042-477-0703",
     "shopAddress": "대전광역시 서구 둔산로 8(둔산동)"
   },
   {
-    "shopNo": 18,
+    "id": 18,
     "locName": "울산",
     "shopName": "울산 덕하점",
     "shopTel": "052-257-0527",
     "shopAddress": "울산 울주군 청량읍 덕하로 233"
   },
   {
-    "shopNo": 19,
+    "id": 19,
     "locName": "울산",
     "shopName": "울산 천곡점",
     "shopTel": "052-282-7442",
     "shopAddress": "울산광역시 북구 천곡길 161(천곡동) 107동 1층 107호 일부호"
   },
   {
-    "shopNo": 20,
+    "id": 20,
     "locName": "울산",
     "shopName": "다운점",
     "shopTel": "052-223-7045",
     "shopAddress": "울산광역시 중구 다운로 114 (다운동) 1층"
   },
   {
-    "shopNo": 21,
+    "id": 21,
     "locName": "울산",
     "shopName": "울산송정점",
     "shopTel": "070-4027-1456",
     "shopAddress": "울산광역시 북구 박상진2로 100 (화봉동) 1층 104호 (오신타워)"
   },
   {
-    "shopNo": 22,
+    "id": 22,
     "locName": "울산",
     "shopName": "남목점",
     "shopTel": "052-232-8802",
     "shopAddress": "울산광역시 동구 방어진순환도로 1118 (서부동)"
   },
   {
-    "shopNo": 23,
+    "id": 23,
     "locName": "울산",
     "shopName": "언양점",
     "shopTel": "052-254-1889",
     "shopAddress": "울산광역시 울주군 언양읍 헌양길 97, 1층"
   },
   {
-    "shopNo": 24,
+    "id": 24,
     "locName": "울산",
     "shopName": "병영점",
     "shopTel": "052-297-3174",
     "shopAddress": "울산광역시 중구 곽남길3"
   },
   {
-    "shopNo": 25,
+    "id": 25,
     "locName": "울산",
     "shopName": "상안점",
     "shopTel": "052-281-1431",
     "shopAddress": "울산광역시 북구 아진로 77"
   },
   {
-    "shopNo": 26,
+    "id": 26,
     "locName": "울산",
     "shopName": "우정선경점",
     "shopTel": "052-243-9001",
     "shopAddress": "울산광역시 중구 유곡로 10, 상가동 108호(우정동, 선경2차아파트)"
   },
   {
-    "shopNo": 27,
+    "id": 27,
     "locName": "울산",
     "shopName": "유곡점",
     "shopTel": "052-245-6875",
     "shopAddress": "울산광역시 중구 종가4길5(유곡동)"
   },
   {
-    "shopNo": 28,
+    "id": 28,
     "locName": "울산",
     "shopName": "천상점",
     "shopTel": "052-211-0800",
     "shopAddress": "울산광역시 울주군 범서읍 천상중앙길 100-1"
   },
   {
-    "shopNo": 29,
+    "id": 29,
     "locName": "울산",
     "shopName": "구영점",
     "shopTel": "052-246-3050",
     "shopAddress": "울산광역시 울주군 범서읍 구영리 853-2"
   },
   {
-    "shopNo": 30,
+    "id": 30,
     "locName": "울산",
     "shopName": "전하점",
     "shopTel": "052-233-7020",
     "shopAddress": "울산광역시 동구 진성14길77"
   },
   {
-    "shopNo": 31,
+    "id": 31,
     "locName": "울산",
     "shopName": "삼산점",
     "shopTel": "052-272-9989",

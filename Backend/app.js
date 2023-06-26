@@ -3,11 +3,14 @@ const path  = require('path');
 const morgan = require('morgan');
 
 const {sequelize} = require('./models');
-
+const cors = require('cors');
 const app = express();
 
+const shopRoutes = require('./routes/shops');
+
 app.set('port', process.env.PORT || 3001);
-app.set('view Engine', 'html');
+app.set('view Engine', 'ejs');
+
 
 // force를 true로하면 서버 실행마다 테이블을 재생성함.
 sequelize.sync({force: false})
@@ -18,6 +21,13 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+
+// cors
+app.use(cors({origin: '*'}))
+
+app.use("/api/shops", shopRoutes);
+
+
 
 app.use((req, res, next)=>{
   const error = new Error(`${req.method} ${req.url} 라우터가 없습니다.`)

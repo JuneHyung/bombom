@@ -19,7 +19,7 @@
 </template>
 <script setup>
 import IntroduceSection from '@/components/main/IntroduceSection.vue'
-import KakaoMap from '@/components/main/KakaoMap.vue'
+import KakaoMap from '@/components/common/KakaoMap.vue'
 import { DAEGU_LOCATION, DAEJEON_LOCATION } from '@/constant/mainPageText.js'
 const textList = [DAEGU_LOCATION, DAEJEON_LOCATION]
 </script>

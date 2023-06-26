@@ -9,14 +9,19 @@ const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
-const User = require('./user');
+// const User = require('./user');
+// const Menu = require('./menu');
+// const SHop = require('./shop');
+// const Notice = require('./notice');
 
-let sequelize;
-if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config);
-} else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
-}
+// let sequelize;
+const sequelize = new Sequelize(config.database, config.username, config.password, config);
+
+// if (config.use_env_variable) {
+//   sequelize = new Sequelize(process.env[config.use_env_variable], config);
+// } else {
+//   sequelize = new Sequelize(config.database, config.username, config.password, config);
+// }
 
 fs
   .readdirSync(__dirname)
@@ -29,8 +34,11 @@ fs
     );
   })
   .forEach(file => {
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+    // (sequelize, Sequelize.DataTypes)
+    const model = require(path.join(__dirname, file));
+    console.log(file, model.name);
     db[model.name] = model;
+    model.initiate(sequelize);
   });
 
 Object.keys(db).forEach(modelName => {
@@ -42,9 +50,5 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-db.User = User;
 
-User.initiate(sequelize);
-
-User.associate(db);
 module.exports = db;
