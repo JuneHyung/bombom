@@ -7,9 +7,9 @@ const cors = require('cors');
 const app = express();
 
 const shopRoutes = require('./routes/shops');
-
 app.set('port', process.env.PORT || 3001);
-app.set('view Engine', 'ejs');
+// app.set('view Engine', 'ejs');
+// app.set('views', express.static(frontendPath))
 
 
 // force를 true로하면 서버 실행마다 테이블을 재생성함.
@@ -39,7 +39,7 @@ app.use((err, req, res, next)=> {
   res.locals.message = err.message;
   res.locals.error = process.env.NODE_ENV !== 'production' ? err : {};
   res.status(err.status || 500);
-  res.render('error');
+  // res.render('error');
 });
 
 app.listen(app.get('port'), () =>{

@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "my password",
-    "database": "db to use",
+    "password": "wnsgud12#$",
+    "database": "bombom",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
