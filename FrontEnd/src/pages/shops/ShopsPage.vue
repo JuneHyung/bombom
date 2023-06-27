@@ -52,7 +52,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, onBeforeMount, onMounted, ref } from 'vue'
 import { getAllShops, getShopsByLocName } from '@/api/shops.js'
 import KakaoMap from '@/components/common/KakaoMap.vue'
 import _ from 'lodash'
@@ -97,7 +97,7 @@ const changePageIdx = (idx) => {
   else pageIdx.value = idx - 1
 }
 
-onMounted(async () => {
+onBeforeMount(async () => {
   await getAllShopsList()
   await getShopsListByLocName(typeList.value[pageIdx.value])
 })
