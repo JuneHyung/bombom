@@ -15,19 +15,22 @@ export const getFetch = async (url, params) => {
     return await fetch(`${url}/${params}`, options)
   }
 }
+
 export const postFetch = async (url, body) => {
     const options = _.merge(defaultOptions('POST'), {body})
     return await fetch(`${url}`, options)
 }
+
 export const putFetch = async (url, body) => {
     const options = _.merge(defaultOptions('UPDATE'), {body})
     return await fetch(`${url}`, options)
 }
+
 export const deleteFetch = async (url, params) => {
-  const options = _.merge(defaultOptions('DELETE'))
+  const options = defaultOptions('DELETE')
   if(params===undefined || params===null){
-    return await fetch(`${url}/${params}`, options)
-  }else{
     return await fetch(`${url}`, options)
+  }else{
+    return await fetch(`${url}/${params}`, options)
   }
 }

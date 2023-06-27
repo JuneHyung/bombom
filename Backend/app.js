@@ -7,9 +7,9 @@ const cors = require('cors');
 const app = express();
 
 const shopRoutes = require('./routes/shops');
+const noticesRoutes = require('./routes/notices');
+// const menusRoutes = require('./routes/menus');
 app.set('port', process.env.PORT || 3001);
-// app.set('view Engine', 'ejs');
-// app.set('views', express.static(frontendPath))
 
 
 // force를 true로하면 서버 실행마다 테이블을 재생성함.
@@ -26,6 +26,8 @@ app.use(express.urlencoded({extended: false}));
 app.use(cors({origin: '*'}))
 
 app.use("/api/shops", shopRoutes);
+app.use("/api/notices", noticesRoutes);
+// app.use("/api/menus", menusRoutes);
 
 
 

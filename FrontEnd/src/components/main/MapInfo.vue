@@ -4,7 +4,7 @@
       <IntroduceSection>
         <template #left-pannel>
           <div class="text-pannel">
-            <h1>{{ loc[0].title }}</h1>
+            <h1>{{ loc[0].name }}</h1>
             <div>{{ loc[0].address }}</div>
           </div>
         </template>

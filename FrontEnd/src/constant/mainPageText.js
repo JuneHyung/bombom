@@ -35,17 +35,17 @@ export const BRAND_CONCEPT = {
 }
 
 export const DAEGU_LOCATION = [{
-  title: '본점위치', 
+  name: '본점위치', 
   address: `대구광역시 중구 동덕로 125(삼덕동 2가 101-1번지)`
 },
 {
-  title: 'test용 오쏘카페',
+  name: 'test용 오쏘카페',
   address: `대구광역시 수성구 달구벌대로 2274`
 }
 ]
 
 export const DAEJEON_LOCATION = [{
-  title: '대전 교육장', 
+  name: '대전 교육장', 
   address: `대구광역시 수성구 달구벌대로 2280(수성동1가 89-42) 4층`
 }]
 
