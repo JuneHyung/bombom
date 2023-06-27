@@ -28,7 +28,7 @@ class Menu extends Sequelize.Model {
       sequelize,
       timestamps: false,
       underscored:false,
-      modelName: 'Notice',
+      modelName: 'Menu',
       tableName: 'menus',
       paranoid: false,
       charset: 'utf8',

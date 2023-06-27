@@ -8,7 +8,7 @@ const app = express();
 
 const shopRoutes = require('./routes/shops');
 const noticesRoutes = require('./routes/notices');
-// const menusRoutes = require('./routes/menus');
+const menusRoutes = require('./routes/menus');
 app.set('port', process.env.PORT || 3001);
 
 
@@ -27,7 +27,7 @@ app.use(cors({origin: '*'}))
 
 app.use("/api/shops", shopRoutes);
 app.use("/api/notices", noticesRoutes);
-// app.use("/api/menus", menusRoutes);
+app.use("/api/menus", menusRoutes);
 
 
 

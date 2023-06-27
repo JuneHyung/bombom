@@ -28,10 +28,31 @@
 </template>
 
 <script setup>
-import menuData from '@/constant/menuData.json'
-import { computed, ref } from 'vue'
+import { onMounted, ref } from 'vue'
+import {getAllMenuTypes, getMenusByMenuType} from '@/api/menus.js';
 const curIdx = ref(0)
-const menuTypeList = menuData.map((el) => el.type)
-const menuList = computed(() => menuData.map((el) => el.list)[curIdx.value])
-const changeCurIdx = (idx) => (curIdx.value = idx)
+const menuTypeList = ref([]);
+const menuList = ref([]);
+const changeCurIdx = (idx) =>{ 
+  curIdx.value = idx
+  getMenuListByMenuType(menuTypeList.value[idx]);
+};
+
+const getAllMenuTypeList = async () =>{
+  const data = await getAllMenuTypes();
+  menuTypeList.value = data;
+}
+
+const getMenuListByMenuType = async (menuType) =>{
+  const data = await getMenusByMenuType(menuType);
+  console.log(data)
+  menuList.value =data;
+}
+
+onMounted(async ()=>{
+  await getAllMenuTypeList();
+  await getMenuListByMenuType(menuTypeList.value[curIdx.value]);
+})
+
+
 </script>
