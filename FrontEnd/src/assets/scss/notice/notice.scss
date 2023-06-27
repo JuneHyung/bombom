@@ -1,8 +1,9 @@
 .notice-wrap{
   display:flex;
-  flex:1;
   flex-direction: column;
+  justify-content: space-between;
   padding: 2.5rem;
+  height:$content-min-height;
   .notice-title-wrap{
     display: flex;
     flex-direction: row;

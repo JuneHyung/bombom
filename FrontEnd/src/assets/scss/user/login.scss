@@ -1,13 +1,14 @@
 .login-form-wrap{
   display:flex;
+  // flex:1;
+  height: $content-min-height;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   padding:2.5rem;
   .login-content-box{
     display:flex;
     flex-direction:column;
     flex: 0 1 500px;
-    
     .login-title-box{
       display:flex;
       background-color:$anchor-color;

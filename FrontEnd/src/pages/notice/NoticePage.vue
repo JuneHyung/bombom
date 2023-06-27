@@ -2,7 +2,7 @@
   <div class="notice-wrap">
     <div class="notice-title-wrap">
       <h1>공지사항</h1>
-      <button class="notice-edit-button">등록</button>
+      <button class="notice-edit-button" @click="openCreateModal">등록</button>
     </div>
     <table>
       <thead>
@@ -46,6 +46,9 @@ import MdiIcon from '@/components/common/MdiIcon.vue';
 import noticeData from '@/constant/noticeData.json';
 import {getAllNotices, getNoticeById, deleteNoticeById} from '@/api/notices.js';
 import { computed, onMounted, ref } from 'vue';
+import Swal from 'sweetalert2'
+
+
 const curIdx = ref(0);
 const maxCnt = 10;
 
@@ -88,7 +91,22 @@ const deleteNotice = async (noticeId) => {
   }
 }
 
+const testData = ref('');
+
+const openCreateModal = () =>{
+  Swal.fire({
+    title: '공지사항 등록',
+    input: ''
+  })
+}
+
 onMounted(()=>{
   getAllNoticesList();
 })
 </script>
+<style scoped>
+.block{
+  width:100%;
+  height:40px;
+}
+</style>

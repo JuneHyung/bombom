@@ -1,5 +1,8 @@
 .menu-wrap{
   padding: 2.5rem;
+  min-height: $content-min-height;
+  display:flex;
+  flex-direction: column;
   .menu-tab{
     display:flex;
     .menu-tab-item{
