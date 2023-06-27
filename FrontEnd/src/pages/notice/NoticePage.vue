@@ -48,11 +48,13 @@ import { computed, onMounted, ref } from 'vue';
 const curIdx = ref(0);
 const maxCnt = 10;
 
-const noticeList = computed(()=> curIdx.value*maxCnt+maxCnt<=noticeData.length ? noticeData.slice(curIdx.value*maxCnt, maxCnt) : noticeData.slice(curIdx.value*maxCnt));
+const noticeList = computed(()=> curIdx.value*maxCnt+maxCnt<=noticeData.length ? noticeData.slice(curIdx.value*maxCnt, curIdx.value*maxCnt+maxCnt) : noticeData.slice(curIdx.value*maxCnt));
 // const noticeList = [];
 const changeCurIdx = (idx) => {
-  curIdx.value =idx
-  console.log(curIdx.value)
+  const end = Math.ceil(noticeData.length/maxCnt);
+  if(idx<0) curIdx.value = idx+1;
+  else if(idx<end) curIdx.value = idx;
+  else curIdx.value = idx-1;
 }
 const headLabelList = ['글 번호', '제목', '작성일', '조회수', 'Actions']
 const numList = ref([]);

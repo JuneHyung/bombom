@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import MainPage from '@/pages/MainPage.vue';
 import MenuPage from '@/pages/menu/MenuPage.vue';
 import NoticePage from '@/pages/notice/NoticePage.vue';
-import FindPage from '@/pages/find/FindPage.vue';
+import ShopsPage from '@/pages/shops/ShopsPage.vue';
 import LoginPage from '@/pages/user/LoginPage.vue';
 import SignupPage from '@/pages/user/SignupPage.vue';
 
@@ -25,9 +25,9 @@ const router = createRouter({
       component: NoticePage
     },
     {
-      path: '/find',
-      name: 'Find',
-      component: FindPage
+      path: '/shops',
+      name: 'Shops',
+      component: ShopsPage
     },
     {
       path: '/login',

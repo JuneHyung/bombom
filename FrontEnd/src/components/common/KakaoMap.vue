@@ -3,10 +3,12 @@
   <!-- <div class="map-box"></div> -->
 </template>
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, onUpdated, ref} from 'vue'
 const props = defineProps({
   addressList: Array
 })
+
+
 
 // 지도 객체
 const map = ref(null)
@@ -58,11 +60,12 @@ const initMap = () => {
    *  ...
    * ]
    */
+
   for (const address of props.addressList) {
     geocoder.addressSearch(address.address, (result, status) => {
       if (status === kakao.maps.services.Status.OK) {
         const coords = new kakao.maps.LatLng(result[0].y, result[0].x)
-        initMarker(address.title, coords)
+        initMarker(address.name, coords)
         bounds.extend(coords)
         setBounds(bounds)
       }
@@ -89,13 +92,17 @@ const initScript = () => {
 }
 
 onMounted(() => {
-  initScript()
+  initScript();
 })
+onUpdated(()=>{
+  initMap();
+})
+
 </script>
 <style scoped lang="scss">
 .map-box {
   width: 100%;
-  height: 300px;
-  border: 1px solid black;
+  height: 100%;
+  min-height:300px;
 }
 </style>

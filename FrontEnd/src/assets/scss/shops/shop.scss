@@ -1,0 +1,75 @@
+.shops-content-wrap{
+  display:flex;
+  flex:1;
+  flex-direction: column;
+  padding-bottom:2.5rem;
+  .map-wrap-box{
+    display: flex;
+    flex:6 50vh;
+  }
+  .type-list-wrap-box{
+    display:flex;
+    flex:1;
+    padding: 2.5rem;
+    // flex-direction: row;
+    .type-item{
+      display:flex;
+      flex:1;
+      justify-content:center;
+      align-items: center;
+      height:100px;
+      transition:all 0.4s;
+      font-weight:900;
+      cursor:pointer;
+      &:hover{
+        background-color:$point-color;
+        color:$hover-color;
+      }
+    }
+    .active-item{
+      background-color: $point-color;
+      color:$hover-color;
+    }
+  }
+  .shops-table-wrap-box{
+    display:flex;
+    flex:4;
+    flex-direction: column;
+    padding: 0 2.5rem;
+    table{
+      th, td{
+        text-align:center;
+        height:60px;
+        vertical-align: center;
+        border-bottom:1px solid #ebebeb;
+      }
+      th{
+        border-top:1px solid #ebebeb;
+        border-bottom:2px solid #383838;
+      }
+      // th{
+      //   box-shadow: 0px 3px 0 0 black;
+      // }
+      .no-data-row{
+        height:600px;
+      }
+    }
+
+    .pagenate-list{
+      display:flex;
+      justify-content: flex-end;
+      margin-top:2rem;
+      .pagenate-item{
+        width:40px;
+        cursor:pointer;
+        text-align: center;
+        &:hover{
+          color: deepskyblue;  
+        }
+      }
+      .active-number{
+        color: deepskyblue;
+      }
+    }
+  }
+}
