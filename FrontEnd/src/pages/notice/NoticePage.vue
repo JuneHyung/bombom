@@ -2,7 +2,7 @@
   <div class="notice-wrap">
     <div class="notice-title-wrap">
       <h1>공지사항</h1>
-      <button class="notice-edit-button" @click="openCreateModal">등록</button>
+      <button class="notice-edit-button" @click="openCreateModal" v-if="userStore.userInfo.isAdmin">등록</button>
     </div>
     <table>
       <thead>
@@ -19,8 +19,8 @@
             <td>{{ item.noticeView }}</td>
             <td>
               <MdiIcon name="mdi-eye-outline" @click="getNoticeDetail(item.id)"></MdiIcon>
-              <MdiIcon name="mdi-pencil" class="bb-mx-sm"></MdiIcon>
-              <MdiIcon name="mdi-trash-can-outline" @click="deleteNotice(item.id)"></MdiIcon>
+              <MdiIcon name="mdi-pencil" class="bb-mx-sm" v-if="userStore.userInfo.isAdmin"></MdiIcon>
+              <MdiIcon name="mdi-trash-can-outline" @click="deleteNotice(item.id)" v-if="userStore.userInfo.isAdmin"></MdiIcon>
             </td>
           </tr>
         </template>
@@ -47,7 +47,8 @@ import noticeData from '@/constant/noticeData.json';
 import {getAllNotices, getNoticeById, deleteNoticeById} from '@/api/notices.js';
 import { computed, onMounted, ref } from 'vue';
 import Swal from 'sweetalert2'
-
+import {useUserStore} from '@/stores/user.js';
+const userStore = useUserStore();
 
 const curIdx = ref(0);
 const maxCnt = 10;

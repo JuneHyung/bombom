@@ -16,4 +16,4 @@ const bannerList = [
   {url:'src/assets/images/banners/banner03.jpg', alt: 'banner03이미지'},
   {url:'src/assets/images/banners/banner04.jpg', alt: 'banner04이미지'},
 ]
-</script>@/api/shops.js
+</script>

@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const dayjs = require('dayjs');
 const _ = require('lodash');
 
 exports.getUsers = async (req, res, next) =>{
@@ -35,7 +36,16 @@ exports.postUsers = async (req, res, next) => {
 exports.postLogin = async (req, res, next) =>{
   const userInfo = await User.findOne({where: {userId: req.body.id}});
   if(req.body.password === userInfo.userPw){
-    res.status(200).json({code: 200, message: '성공적으로 로그인되었습니다.' });
+    const result = {
+      userId: userInfo.userId,
+      userName: userInfo.userName,
+      userEmail: userInfo.userEmail,
+      userAddress: userInfo.userAddress,
+      userTel: userInfo.userTel,
+      joinDate: userInfo.joinDate,
+      isAdmin: userInfo.isAdmin,
+    }
+    res.status(200).json({code: 200, userInfo: result, message: '성공적으로 로그인되었습니다.' });
   }else{
     res.status(400).json({code: 400, message: '아이디 또는 비밀번호를 확인해주세요.' });
   }

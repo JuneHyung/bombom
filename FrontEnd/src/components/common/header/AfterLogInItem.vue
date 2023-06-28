@@ -1,8 +1,16 @@
 <template>
   <li class="nav-item">
     <RouterLink :to="{name: 'MyPage'}">
-      가로등님 (USER ID) 님 환영합니다.
+      {{userStore.userInfo.userName}}님 ({{ userStore.userInfo.userId }}) 님 환영합니다.
     </RouterLink>
-    <button>LOGOUT</button>
   </li>
+  <button @click="logout">LOGOUT</button>
 </template>
+<script setup>
+import {useUserStore} from '@/stores/user.js';
+const userStore = useUserStore();
+
+const logout = () =>{
+  userStore.setIsLogin(false);
+}
+</script>

@@ -25,7 +25,9 @@ import {useRouter} from 'vue-router';
 import {postUserLogin} from '@/api/users.js';
 import { ref } from 'vue';
 import Swal from 'sweetalert2';
+import {useUserStore} from '@/stores/user.js';
 const router = useRouter();
+const userStore = useUserStore();
 const moveSignup = () =>{
   router.push({name: 'Signup'})
 }
@@ -42,7 +44,9 @@ const moveLogin = async () =>{
   }
   const data = await postUserLogin(body);
   if(data.code===200){
-    router.push({name: 'Main'})
+    userStore.setUserInfo(data.userInfo);
+    userStore.setIsLogin(true);
+    if(userStore.isLogin) router.push({name: 'Main'})
   }else{
     Swal.fire({
       icon: 'error',
