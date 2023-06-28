@@ -17,7 +17,7 @@ export const getFetch = async (url, params) => {
 }
 
 export const postFetch = async (url, body) => {
-    const options = _.merge(defaultOptions('POST'), {body})
+    const options = _.merge(defaultOptions('POST'), {body:JSON.stringify(body)})
     return await fetch(`${url}`, options)
 }
 

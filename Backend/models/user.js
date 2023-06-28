@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-
+const dayjs = require('dayjs');
 
 class User extends Sequelize.Model {
   static initiate(sequelize){
@@ -18,24 +18,25 @@ class User extends Sequelize.Model {
       },
       userEmail:{
         type: Sequelize.STRING(100),
-        allowNull: false,
+        allowNull: true,
       },
       userAddress:{
         type: Sequelize.STRING(200),
-        allowNull: false,
+        allowNull: true,
       },
       userTel:{
         type: Sequelize.STRING(20),
-        allowNull: false,
+        allowNull: true,
       },
       isAdmin:{
-        type: Sequelize.BOOLEAN,
-        allowNull: false,
+        type: Sequelize.TINYINT,
+        allowNull: true,
+        defaultValue: 0,
       },
       joinDate: {
         type: Sequelize.DATE,
-        allowNull: false,
-        defaultValue: Sequelize.NOW
+        allowNull: true,
+        defaultValue: dayjs()
       },
     }, {
       sequelize,

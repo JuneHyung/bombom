@@ -69,8 +69,10 @@
   </div>
 </template>
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import {getAllUser, postUser} from '@/api/users.js'
+import Swal from 'sweetalert2'
 const router = useRouter()
 const formData = ref({
   id: { value: '', placeholder: '아이디를 입력해주세요.' },
@@ -80,14 +82,52 @@ const formData = ref({
   address: { value: '', placeholder: '주소를 입력해주세요.' },
   tel: { value: '', placeholder: '전화번호 숫자로만 입력해주세요.' }
 })
+
 const moveBack = () => {
   router.back()
 }
 const resetFormData = () => {
-  const keys = Object.keys(formData.value);
-  for(const key of keys) formData.value[key].value = '';
+  const keys = Object.keys(formData.value)
+  for (const key of keys) formData.value[key].value = ''
 }
-const signUp = () => {
-  router.push({ name: 'Login' })
+const makeBody = (body) =>{
+  const result = {
+    userId: body.id.value,
+    userPw: body.pw.value,
+    userName: body.name.value,
+    userEmail: body.email.value,
+    userAddress: body.address.value,
+    userTel: body.tel.value,
+    isAdmin: false,
+    joinDate: new Date()
+  };
+  return result;
 }
+const signUp = async () => {
+  const body = makeBody(formData.value)
+  const data = await postUser(body)
+
+  if (data.code === 200) {
+    Swal.fire({
+      icon: 'success',
+      title: 'GOOD JOB!',
+      text: data.message
+    })
+    router.push({ name: 'Login' })
+  }else{
+    Swal.fire({
+      icon: 'ERROR',
+      title: 'ERROR!',
+      text: data.message
+    })
+  }
+}
+
+const getUser = async () =>{
+  const data = await getAllUser();
+  console.log(data)
+}
+onMounted(()=>{
+  getUser();
+})
 </script>
