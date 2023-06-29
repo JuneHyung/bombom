@@ -6,6 +6,7 @@ import ShopsPage from '@/pages/shops/ShopsPage.vue';
 import LoginPage from '@/pages/user/LoginPage.vue';
 import SignupPage from '@/pages/user/SignupPage.vue';
 import MyPage from '@/pages/user/MyPage.vue';
+import CheckPassword from '@/pages/user/CheckPassword.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,6 +40,11 @@ const router = createRouter({
       path: '/signup',
       name: 'Signup',
       component: SignupPage,
+    },
+    {
+      path: '/checkPassword',
+      name: 'CheckPassword',
+      component: CheckPassword,
     },
     {
       path: '/mypage',

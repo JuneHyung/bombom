@@ -35,7 +35,8 @@ exports.postUsers = async (req, res, next) => {
 
 exports.postLogin = async (req, res, next) =>{
   const userInfo = await User.findOne({where: {userId: req.body.id}});
-  if(req.body.password === userInfo.userPw){
+  if(!userInfo || req.body.password !== userInfo.userPw) res.status(400).json({code: 400, message: '아이디 또는 비밀번호를 확인해주세요.' });
+  else{
     const result = {
       userId: userInfo.userId,
       userName: userInfo.userName,
@@ -46,7 +47,31 @@ exports.postLogin = async (req, res, next) =>{
       isAdmin: userInfo.isAdmin,
     }
     res.status(200).json({code: 200, userInfo: result, message: '성공적으로 로그인되었습니다.' });
-  }else{
-    res.status(400).json({code: 400, message: '아이디 또는 비밀번호를 확인해주세요.' });
   }
+}
+
+exports.postCheckPassword = async (req, res, next) =>{
+  const userInfo = await User.findOne({where: {userId: req.body.id}});
+  if(req.body.password === userInfo.userPw){
+    res.status(200).json({code: 200, message: 'SUCCESS'});
+  }else{
+    res.status(400).json({code: 400, message: '비밀번호가 맞지 않습니다.' });
+  }
+}
+
+exports.putUserInfo = async (req, res, next) =>{
+  const userInfo = await User.findOne({where: {userId: req.body.userId}});
+
+  if(!userInfo) res.status(400).json('해당 유저를 찾지 못하였습니다.');
+  const updateUser = await User.update(req.body, {where: {userId: req.body.userId}})
+  if(updateUser) res.status(200).json({code: 200, message: '저장 완료하였습니다!'});
+  else res.status(400).json({code: 400, message: 'FAIL'});
+}
+
+exports.deleteUserInfo = async (req, res, next) =>{
+  const {userId} = req.params
+  console.log(userId)
+  const deleteUser = await User.destroy({where: {userId}})
+  if(deleteUser) res.status(200).json({code: 200, message: '탈퇴 완료하였습니다!'});
+  else res.status(400).json({code: 400, message: 'FAIL'});
 }

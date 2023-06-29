@@ -54,8 +54,6 @@ exports.putNotice = async (req, res, next) => {
 }
 exports.deleteNotice = async (req, res, next) => {
   const {noticeId} = req.params
-  console.log('notice')
-  console.log(noticeId)
   try{
     const deletedNotice = await Notice.destroy({
       where:{id: noticeId},

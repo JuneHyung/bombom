@@ -1,6 +1,6 @@
 <template>
   <li class="nav-item">
-    <RouterLink :to="{name: 'MyPage'}">
+    <RouterLink :to="{name: 'CheckPassword'}">
       {{userStore.userInfo.userName}}님 ({{ userStore.userInfo.userId }}) 님 환영합니다.
     </RouterLink>
   </li>
