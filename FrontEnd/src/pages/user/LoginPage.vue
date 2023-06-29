@@ -1,20 +1,25 @@
 <template>
-  <div class="login-form-wrap">
-    <div class="login-content-box">
-      <div class="login-title-box">
+  <div class="common-form-wrap">
+    <div class="common-content-box">
+      <div class="common-title-box">
         <h1>로그인 해주세요</h1>
       </div>
-      <form class="login-form-box">
-        <label for="" class="id-wrap">
-          <span class="id-label">아이디</span>
-          <input type="text" v-model="formData.id.value" :placeholder="formData.id.placeholder" class="id-input"/></label>
-        <label for="" class="pw-wrap">
-          <span class="pw-label">비밀번호</span>
-          <input type="password"  v-model="formData.password.value" :placeholder="formData.password.placeholder" class="pw-input" />
-        </label>
+      <form class="common-form-box">
+        <template v-for="(key, idx) in Object.keys(formData)" :key="idx">
+          <label :for="key" class="common-input-wrap">
+            <span class="common-input-label">{{ formData[key].label }}</span>
+            <input
+              :type="formData[key].type"
+              :placeholder="formData[key].placeholder"
+              v-model="formData[key].value"
+              class="common-input"
+            />
+          </label>
+        </template>
+        
         <div class="button-wrap">
-          <button type="button" class="signup-button" @click="moveSignup">회원가입</button>
-          <button type="button" class="login-button" @click="moveLogin">로그인</button>
+          <button type="button" class="common-button bb-mr-sm" @click="moveSignup">회원가입</button>
+          <button type="button" class="common-button" @click="moveLogin">로그인</button>
         </div>
       </form>
     </div>
@@ -33,14 +38,14 @@ const moveSignup = () =>{
 }
 
 const formData = ref({
-  id: {value: '', placeholder: '아이디를 입력해주세요.'},
-  password: {value: '', placeholder: '비밀번호를 입력해주세요.'},
+  userId: { value: '', placeholder: '아이디를 입력해주세요.', label: '아이디', type:'text' },
+  userPw: { value: '', placeholder: '비밀번호를 입력해주세요.', label: '비밀번호', type:'password' },
 })
 
 const moveLogin = async () =>{
   const body = {
-    id: formData.value.id.value,
-    password: formData.value.password.value
+    id: formData.value.userId.value,
+    password: formData.value.userPw.value
   }
   const data = await postUserLogin(body);
   if(data.code===200){

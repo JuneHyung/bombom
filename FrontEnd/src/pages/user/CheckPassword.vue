@@ -1,24 +1,24 @@
 <template>
 
-<div class="signup-form-wrap">
-    <div class="signup-content-box">
-      <div class="signup-title-box">
+<div class="common-form-wrap">
+    <div class="common-content-box">
+      <div class="common-title-box">
         <h1>비밀번호를 입력해주세요.</h1>
       </div>
-      <form class="signup-form-box">
-        <label for="" class="pw-wrap">
-          <span class="pw-label">비밀번호</span>
+      <form class="common-form-box">
+        <label for="" class="common-input-wrap">
+          <span class="common-input-label">{{ formData.userPw.label }}</span>
           <input
-            type="password"
+            :type="formData.userPw.placeholder"
             :placeholder="formData.userPw.placeholder"
             v-model="formData.userPw.value"
             :disabled="formData.userPw.disabled"
-            class="pw-input"
+            class="common-input"
           />
         </label>
         <div class="button-wrap">
-          <button type="button" class="reset-button" @click="moveBack">취소</button>
-          <button type="button" class="signup-button" @click="checkPassword">입력</button>
+          <button type="button" class="common-button bb-mr-sm" @click="moveBack">취소</button>
+          <button type="button" class="common-button" @click="checkPassword">입력</button>
         </div>
       </form>
     </div>
@@ -33,7 +33,7 @@ import Swal from 'sweetalert2';
 const router = useRouter();
 const userStore = useUserStore();
 const formData = ref({
-  userPw: { value: '', placeholder: '새 비밀번호를 입력해주세요.', disabled: false },
+  userPw: { value: '', placeholder: '새 비밀번호를 입력해주세요.', disabled: false, label: '비밀번호', type: 'password' },
 })
 
 const moveBack = () => {
