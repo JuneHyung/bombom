@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-
+const dayjs = require('dayjs');
 
 class Notice extends Sequelize.Model {
   static initiate(sequelize){
@@ -9,16 +9,18 @@ class Notice extends Sequelize.Model {
         allowNull: false,
       },
       noticeContent:{
-        type: Sequelize.STRING(20),
+        type: Sequelize.STRING(100),
         allowNull: false,
       },
       noticeView:{
-        type: Sequelize.STRING(20),
-        allowNull: false,
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
       },
       noticeDate:{
-        type: Sequelize.STRING(100),
-        allowNull: false,
+        type: Sequelize.DATE,
+        allowNull: true,
+        defaultValue: dayjs()
       },
     }, {
       sequelize,

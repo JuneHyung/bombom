@@ -1,0 +1,15 @@
+.common-button{
+  width:80px;
+  height: 2.0rem;
+  background-color :$point-color;
+  border:none;
+  cursor: pointer;
+  border-radius:1.25rem;
+  transition:all 0.4s;
+  font-weight:600;
+  &:hover{
+    // background-color:$hover-color;
+    background-color:#3b2212;
+    color:$white-color;
+  }
+}

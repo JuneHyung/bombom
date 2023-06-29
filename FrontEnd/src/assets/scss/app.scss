@@ -2,8 +2,10 @@
 @import './variable.scss';
 @import './common.scss';
 
+@import './common/common.scss';
 @import './common/navHeader.scss';
 @import './common/navFooter.scss';
+@import './common/modal.scss';
 
 @import './main/main.scss';
 @import './menu/menu.scss';

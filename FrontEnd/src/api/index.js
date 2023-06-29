@@ -1,5 +1,5 @@
 import _ from 'lodash';
-const headers = {'Content-Type': 'application/json'}
+const headers = {'Content-Type': 'application/json',  'Access-Control-Allow-Methos': "PUT", 'Access-Control-Allow-Origin': '*', mode: 'no-cors'}
 const defaultOptions = (method) =>{
   return {
     method,

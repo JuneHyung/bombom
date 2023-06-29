@@ -1,61 +1,99 @@
-.notice-wrap{
-  display:flex;
+.notice-wrap {
+  display: flex;
   flex-direction: column;
   // justify-content: space-between;
   padding: 2.5rem;
-  min-height:$content-min-height;
-  .notice-title-wrap{
+  min-height: $content-min-height;
+  .notice-title-wrap {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    .notice-edit-button{
-      width:80px;
-      background-color :$point-color;
-      border:none;
+    .notice-edit-button {
+      width: 80px;
+      background-color: $point-color;
+      border: none;
       cursor: pointer;
-      border-radius:1.25rem;
-      transition:all 0.4s;
-      font-weight:600;
-      &:hover{
+      border-radius: 1.25rem;
+      transition: all 0.4s;
+      font-weight: 600;
+      &:hover {
         // background-color:$hover-color;
-        background-color:#3b2212;
-        color:$white-color;
+        background-color: #3b2212;
+        color: $white-color;
       }
     }
   }
 
-  table{
-    th, td{
-      text-align:center;
-      height:60px;
+  table {
+    th,
+    td {
+      text-align: center;
+      height: 60px;
       vertical-align: center;
-      border-bottom:1px solid #ebebeb;
+      border-bottom: 1px solid #ebebeb;
     }
-    th{
-      border-bottom:2px solid #383838;
+    th {
+      border-bottom: 2px solid #383838;
     }
     // th{
     //   box-shadow: 0px 3px 0 0 black;
     // }
-    .no-data-row{
-      height:600px;
+    .no-data-row {
+      height: 600px;
     }
   }
 
-  .pagenate-list{
-    display:flex;
+  .pagenate-list {
+    display: flex;
     justify-content: flex-end;
-    margin-top:2rem;
-    .pagenate-item{
-      width:40px;
-      cursor:pointer;
+    margin-top: 2rem;
+    .pagenate-item {
+      width: 40px;
+      cursor: pointer;
       text-align: center;
-      &:hover{
-        color: deepskyblue;  
+      &:hover {
+        color: deepskyblue;
       }
     }
-    .active-number{
+    .active-number {
       color: deepskyblue;
+    }
+  }
+}
+
+.notice-form-box {
+  display: flex;
+  flex-direction: column;
+  .notice-title-wrap,
+  .notice-content-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    color: $hover-color;
+
+    .notice-title-label,
+    .notice-content-label {
+      display: flex;
+      flex: 3;
+    }
+    .notice-title-input,
+    .notice-content-input {
+      display: flex;
+      flex: 9;
+      border-radius: 5px;
+      color: $hover-color;
+      border: 1px solid $hover-color;
+      &:focus {
+        outline-color: $hover-color;
+      }
+    }
+
+    .notice-title-input{
+      height:40px;
+    }
+    .notice-content-input{
+      resize:none;
     }
   }
 }

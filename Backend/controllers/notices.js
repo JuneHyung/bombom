@@ -24,6 +24,7 @@ exports.getNoticeById = async (req, res, next) => {
   const {noticeId} = req.params
   try{
     const notice = await Notice.findByPk(noticeId)
+    await Notice.update({noticeView: notice.noticeView+1}, {where: {id: noticeId}})
     res.status(200).json(notice);
   }catch(err){
     next(err);
@@ -31,18 +32,28 @@ exports.getNoticeById = async (req, res, next) => {
 }
 
 exports.postNotice = async (req, res, next) => {
-  const body = req.body;
+  const body = {
+    noticeTitle: req.body.noticeTitle,
+    noticeContent: req.body.noticeContent,
+  }
   try{
     const notice = await Notice.create(body)
-    res.status(200).json(notice);
+    if(notice){
+    res.status(200).json({code: 200, message: '성공적으로 저장되었습니다.'});
+  }else{
+      res.status(400).json({code: 400, message: '등록에 실패하였습니다.'});
+
+    }
   }catch(err){
     next(err);
   }
 }
 exports.putNotice = async (req, res, next) => {
-  const body = req.body;
+  const id = req.body.noticeId;
+  const body = {noticeTitle: req.body.noticeTitle, noticeContent: req.body.noticeContent};
+  console.log(id)
   try{
-    const updatedNotice = await Notice.update(body)
+    const updatedNotice = await Notice.update(body, {where: {id}})
     if(updatedNotice[0]===1) {
       res.status(200).json({code: 200, message: '성공적으로 수정되었습니다.'})
     }else{
