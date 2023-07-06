@@ -1,5 +1,9 @@
 import _ from 'lodash';
-const headers = {'Content-Type': 'application/json',  'Access-Control-Allow-Methos': "PUT", 'Access-Control-Allow-Origin': '*', mode: 'no-cors'}
+const headers = {
+  'Content-Type': 'application/json',  
+  'Access-Control-Allow-Origin': '*', 
+  'mode': 'no-cors'
+}
 const defaultOptions = (method) =>{
   return {
     method,
@@ -22,7 +26,7 @@ export const postFetch = async (url, body) => {
 }
 
 export const putFetch = async (url, body) => {
-    const options = _.merge(defaultOptions('UPDATE'), {body})
+    const options = _.merge(defaultOptions('PUT'), {body:JSON.stringify(body)})
     return await fetch(`${url}`, options)
 }
 

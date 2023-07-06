@@ -8,6 +8,8 @@ import SignupPage from '@/pages/user/SignupPage.vue';
 import MyPage from '@/pages/user/MyPage.vue';
 import CheckPassword from '@/pages/user/CheckPassword.vue';
 
+import jwt_decode from 'jwt-decode';
+import {useUserStore} from '@/stores/user.js';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -52,6 +54,30 @@ const router = createRouter({
       component: MyPage,
     },
   ]
+})
+
+
+router.beforeEach((to,from,next)=>{
+  const token = localStorage.getItem('token');
+  if(token){
+    const userStore = useUserStore();
+    const decoded = jwt_decode(token);
+    userStore.setUserInfo(decoded);
+    userStore.setIsLogin(true);
+    const currentTime = Date.now() / 1000;
+    
+    // console.log(decoded.exp , currentTime)
+    if(decoded.exp < currentTime){
+      // 만료 시 
+      localStorage.removeItem('token')
+      next();
+    }else{
+      // 토큰이 유효한 경우
+      next();
+    }
+  }else{
+    next();
+  }
 })
 
 export default router

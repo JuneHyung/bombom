@@ -29,7 +29,7 @@
 
     <template #footer>
       <button class="common-button bb-mx-sm"  v-if="props.modalStatus!=='detail'" @click="closeCreateModal">취소</button>
-      <button class="common-button bb-mx-sm" v-if="props.modalStatus!=='detail'" @click="props.modalStatus==='modify' ? updateNotice : createNotice()">저장</button>
+      <button class="common-button bb-mx-sm" v-if="props.modalStatus!=='detail'" @click="props.modalStatus==='modify' ? updateNotice() : createNotice()">저장</button>
       <button class="common-button bb-mx-sm" v-else @click="closeCreateModal">확인</button>
     </template>
   </CustomModal>
@@ -87,13 +87,13 @@ const initDetail = async () => {
   }
 }
 
-const makeBody = () =>{
+const makeBody = async (id) =>{
   const keys = Object.keys(formData.value);
-  const result = {};
+  const result = { };
   for(const key of keys){
     result[key] = formData.value[key].value;
   }
-  if(props.modalStatus==='modify')result.noticeId = props.noticeId.value
+  if(props.modalStatus==='modify')result.noticeId = props.noticeId
   return result;
 }
 
@@ -116,7 +116,8 @@ const createNotice = async () =>{
 }
 
 const updateNotice = async () =>{
-  const body = makeBody();
+  const body = await makeBody(props.noticeId);
+  console.log(body)
   const data = await putNoticeById(body);
   if(data.code===200){
     Swal.fire({

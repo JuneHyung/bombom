@@ -1,6 +1,10 @@
 const express= require('express');
 const router = express.Router();
 const usersController = require('../controllers/users');
+const {verifyToken} = require('../middlewares');
+
+// router.post('/token', usersController.createToken);
+// router.get('/test', verifyToken, usersController.tokenTest);
 
 router.get('/', usersController.getUsers);
 router.post('/login', usersController.postLogin);

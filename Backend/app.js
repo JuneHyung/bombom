@@ -16,8 +16,8 @@ app.set('port', process.env.PORT || 3001);
 
 // force를 true로하면 서버 실행마다 테이블을 재생성함.
 sequelize.sync({force: false})
-  .then(()=>{console.log('DB 연결 SUCCESS');})
-  .catch((e)=>{console.error(err)})
+  .then((r)=>{console.log('DB 연결 SUCCESS');})
+  .catch((err)=>{ console.error(err)})
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -25,20 +25,20 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 // cors
-app.use(cors({origin: 'http://127.0.0.1:5173',  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']}))
+app.use(cors({origin: '*'}))
 
-app.use((req, res, next)=> {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+// app.use((req, res, next)=> {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
+//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
   
-  // allow preflight
-  if (req.method === 'OPTIONS') {
-      res.send(200);
-  } else {
-      next();
-  }
-});
+//   // allow preflight
+//   if (req.method === 'OPTIONS') {
+//       res.send(200);
+//   } else {
+//       next();
+//   }
+// });
 
 app.use("/api/shops", shopRoutes);
 app.use("/api/notices", noticesRoutes);

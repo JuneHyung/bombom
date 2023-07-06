@@ -15,6 +15,7 @@ const db = {};
 // const Notice = require('./notice');
 
 // let sequelize;
+// console.log(config)
 const sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 // if (config.use_env_variable) {

@@ -2,6 +2,17 @@ import { deleteFetch, getFetch, postFetch, putFetch } from ".";
 
 const url = import.meta.env.VITE_BACKEND_API_URL;
 
+export const postToken = async (body) =>{
+  try{
+    const res = await postFetch(`${url}/users/token`, body)
+    const data = await res.json();
+    return data;
+  }catch(err){
+    console.error(`Error : ${err}`)
+    throw err;
+  }
+}
+
 export const getAllUser = async () =>{
   try{
     const res = await getFetch(`${url}/users`)

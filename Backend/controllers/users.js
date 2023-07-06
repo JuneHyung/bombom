@@ -1,6 +1,37 @@
 const User = require('../models/user');
 const dayjs = require('dayjs');
 const _ = require('lodash');
+const jwt = require('jsonwebtoken');
+
+
+
+const createToken=async(userInfo)=>{
+  try{
+    if(!userInfo){
+      return res.status(401).json({code:401, meesage: '등록되지 않은 유저 입니다. 유저 등록먼저 해주세요'});
+    }
+    const token = jwt.sign({
+      userId: userInfo.userId,
+      userName: userInfo.userName,
+      isAdmin: userInfo.isAdmin
+    }, `${process.env.JWT_SECRET}`,{
+      expiresIn: '1m', // 유효시간
+      issuer: 'bombom', // 발급자
+    })
+    return token;
+  }catch(err){
+    console.error(err);
+    return res.status(500).json({
+      code:500,
+      message: 'Server Error'
+    })
+  }
+}
+
+exports.tokenTest = (req,res)=>{
+  res.json(res.locals.decoded);
+}
+
 
 exports.getUsers = async (req, res, next) =>{
   try{
@@ -40,13 +71,10 @@ exports.postLogin = async (req, res, next) =>{
     const result = {
       userId: userInfo.userId,
       userName: userInfo.userName,
-      userEmail: userInfo.userEmail,
-      userAddress: userInfo.userAddress,
-      userTel: userInfo.userTel,
-      joinDate: userInfo.joinDate,
       isAdmin: userInfo.isAdmin,
     }
-    res.status(200).json({code: 200, userInfo: result, message: '성공적으로 로그인되었습니다.' });
+    const token = await createToken(userInfo)
+    res.status(200).json({code: 200, message: '성공적으로 로그인되었습니다.', token: token });
   }
 }
 
@@ -75,3 +103,5 @@ exports.deleteUserInfo = async (req, res, next) =>{
   if(deleteUser) res.status(200).json({code: 200, message: '탈퇴 완료하였습니다!'});
   else res.status(400).json({code: 400, message: 'FAIL'});
 }
+
+

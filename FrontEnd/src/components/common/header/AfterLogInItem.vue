@@ -11,6 +11,7 @@ import {useUserStore} from '@/stores/user.js';
 const userStore = useUserStore();
 
 const logout = () =>{
+  localStorage.removeItem('token')
   userStore.setIsLogin(false);
 }
 </script>

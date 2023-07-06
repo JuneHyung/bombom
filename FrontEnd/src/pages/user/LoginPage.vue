@@ -27,10 +27,12 @@
 </template>
 <script setup>
 import {useRouter} from 'vue-router';
-import {postUserLogin} from '@/api/users.js';
+import {postUserLogin, postToken} from '@/api/users.js';
 import { ref } from 'vue';
 import Swal from 'sweetalert2';
 import {useUserStore} from '@/stores/user.js';
+import jwt_decode from 'jwt-decode';
+
 const router = useRouter();
 const userStore = useUserStore();
 const moveSignup = () =>{
@@ -42,16 +44,20 @@ const formData = ref({
   userPw: { value: '', placeholder: '비밀번호를 입력해주세요.', label: '비밀번호', type:'password' },
 })
 
+async function saveTokenToLocalStorage(token) {
+  localStorage.setItem('token', token);
+  router.push({name: 'Main'})
+}
+
 const moveLogin = async () =>{
   const body = {
     id: formData.value.userId.value,
     password: formData.value.userPw.value
   }
+
   const data = await postUserLogin(body);
   if(data.code===200){
-    userStore.setUserInfo(data.userInfo);
-    userStore.setIsLogin(true);
-    if(userStore.isLogin) router.push({name: 'Main'})
+    await saveTokenToLocalStorage(data.token);
   }else{
     Swal.fire({
       icon: 'error',
