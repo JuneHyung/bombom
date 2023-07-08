@@ -14,6 +14,7 @@
   "dependencies": {
     "@jamescoyle/vue-icon": "^0.1.2",
     "@mdi/js": "^7.2.96",
+    "@types/lodash": "^4.14.195",
     "dotenv": "^16.3.1",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",

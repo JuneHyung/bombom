@@ -1,9 +1,10 @@
 // import { ref, computed } from 'vue'
+// import type { UserInfo } from '@/types/user';
 import { defineStore } from 'pinia'
 
 export const useUserStore = defineStore({
   id: 'user-store',
-  state:() =>{
+  state: () =>{
     return{
       userInfo: {
         userId: '',
@@ -11,7 +12,7 @@ export const useUserStore = defineStore({
         userEmail: '',
         userAddress: '',
         userTel: '',
-        isAdmin: 0,
+        isAdmin: false,
         joinDate: '',
       },
       isLogin: false,

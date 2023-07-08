@@ -9,7 +9,7 @@ export const useModalStore = defineStore({
     }
   },
   actions:{
-    toogleIsOpen(flag){
+    toogleIsOpen(flag: boolean){
       this.isOpen=flag
     }
   }

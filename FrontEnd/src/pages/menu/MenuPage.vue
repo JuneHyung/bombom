@@ -27,13 +27,14 @@
   </div>
 </template>
 
-<script setup>
-import { onMounted, ref } from 'vue'
-import {getAllMenuTypes, getMenusByMenuType} from '@/api/menus.js';
+<script setup lang="ts">
+import { onMounted, ref, type Ref } from 'vue'
+import {getAllMenuTypes, getMenusByMenuType} from '@/api/menus';
+import type {MenuList} from '@/types/menus'
 const curIdx = ref(0)
-const menuTypeList = ref([]);
-const menuList = ref([]);
-const changeCurIdx = (idx) =>{ 
+const menuTypeList: Ref<string[]> = ref([]);
+const menuList: Ref<MenuList> = ref([]);
+const changeCurIdx = (idx: number) =>{ 
   curIdx.value = idx
   getMenuListByMenuType(menuTypeList.value[idx]);
 };
@@ -43,9 +44,8 @@ const getAllMenuTypeList = async () =>{
   menuTypeList.value = data;
 }
 
-const getMenuListByMenuType = async (menuType) =>{
+const getMenuListByMenuType = async (menuType: string) =>{
   const data = await getMenusByMenuType(menuType);
-  console.log(data)
   menuList.value =data;
 }
 

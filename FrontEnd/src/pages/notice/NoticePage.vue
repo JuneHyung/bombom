@@ -59,16 +59,16 @@
   <NoticeModal :modalStatus="modalStatus" :noticeId="noticeId"></NoticeModal>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import NoticeModal from '@/components/notice/NoticeModal.vue'
 import MdiIcon from '@/components/common/MdiIcon.vue'
-import noticeData from '@/constant/noticeData.json'
+// import noticeData from '@/constant/noticeData.json'
 import { getAllNotices, deleteNoticeById } from '@/api/notices.js'
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch, type Ref, type ComputedRef } from 'vue'
 import Swal from 'sweetalert2'
 import { useUserStore } from '@/stores/user.js'
 import { useModalStore } from '@/stores/modal.js'
-
+import type {NoticeList} from '@/types/notices'
 const userStore = useUserStore()
 const modalStore = useModalStore()
 
@@ -79,24 +79,23 @@ const modalStatus = ref('edit');
 const noticeId = ref(0);
 
 
-
-const noticeList = computed(() =>
+const noticeList: ComputedRef<NoticeList> = computed(() =>
   curIdx.value * maxCnt + maxCnt <= noticesData.value.length
     ? noticesData.value.slice(curIdx.value * maxCnt, curIdx.value * maxCnt + maxCnt)
     : noticesData.value.slice(curIdx.value * maxCnt)
 )
 // const noticeList = [];
-const noticesData = ref([])
+const noticesData: Ref<NoticeList> = ref([])
 
-const changeCurIdx = (idx) => {
-  const end = Math.ceil(noticeData.length / maxCnt)
+const changeCurIdx = (idx: number) => {
+  const end = Math.ceil(noticesData.value.length / maxCnt)
   if (idx < 0) curIdx.value = idx + 1
   else if (idx < end) curIdx.value = idx
   else curIdx.value = idx - 1
 }
 
 const headLabelList = ['글 번호', '제목', '작성일', '조회수', 'Actions']
-const numList = ref([])
+const numList: Ref<number[]> = ref([])
 const getAllNoticesList = async () => {
   const data = await getAllNotices()
   noticesData.value = data
@@ -107,25 +106,25 @@ const getAllNoticesList = async () => {
 
 
 
-const getNoticeDetail = async (id) => {
+const getNoticeDetail = async (id:number) => {
   noticeId.value = id;
   modalStatus.value = 'detail';
   modalStore.toogleIsOpen(true)
 }
 
 const createNotice = async () =>{
-  noticeId.value = '';
+  noticeId.value = 0;
   modalStatus.value = 'edit';
   modalStore.toogleIsOpen(true)
 }
 
-const modifyNotice = async (id) =>{
+const modifyNotice = async (id: number) =>{
   noticeId.value = id;
   modalStatus.value = 'modify';
   modalStore.toogleIsOpen(true)
 }
 
-const deleteNotice = async (id) => {
+const deleteNotice = async (id: number) => {
   const data = await deleteNoticeById(id)
   if (data.code === 200) {
     Swal.fire({

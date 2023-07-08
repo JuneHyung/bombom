@@ -1,4 +1,4 @@
-import useModalStore from 'src/stores/store.js'
+import {useModalStore} from 'src/stores/modal'
 const modalStore = useModalStore();
 export const openModal = () =>{
   modalStore.toogleIsOpen(true);

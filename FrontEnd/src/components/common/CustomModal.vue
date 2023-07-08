@@ -18,7 +18,7 @@
   </div>
 </template>
 <script setup>
-import {useModalStore} from '@/stores/modal.js'
+import {useModalStore} from '@/stores/modal'
 const modalStore = useModalStore();
 
 const openModal = () =>{

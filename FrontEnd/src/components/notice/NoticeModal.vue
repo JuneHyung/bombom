@@ -34,12 +34,14 @@
     </template>
   </CustomModal>
 </template>
-<script setup>
+<script setup lang="ts">
 import CustomModal from '@/components/common/CustomModal.vue'
 import { getNoticeById, postNotice, putNoticeById } from '@/api/notices.js'
 import { useModalStore } from '@/stores/modal.js'
-import { onMounted, onUpdated, ref } from 'vue'
+import { onUpdated, ref, type Ref } from 'vue'
 import Swal from 'sweetalert2';
+import type { NoticeFormData, postNoticeBody, putNoticeBody } from '@/types/notices';
+
 const props = defineProps({
   modalStatus: String,
   noticeId: Number
@@ -51,7 +53,7 @@ const closeCreateModal = () => {
   modalStore.toogleIsOpen(false);
 }
 
-const formData = ref({
+const formData: Ref<NoticeFormData> = ref({
   noticeTitle: { value: '', placeholder: '제목을 입력해주세요.', disabled: false },
   noticeContent: { value: '', placeholder: '내용을 입력해주세요.', disabled: false }
 })
@@ -59,13 +61,14 @@ const formData = ref({
 const initEdit = () => {
   const keys = Object.keys(formData.value)
   for (const key of keys) {
-    formData.value[key].value = ''
-    formData.value[key].disabled = false
+    const KeyTypeAssertion = key as keyof NoticeFormData;
+    formData.value[KeyTypeAssertion].value = ''
+    formData.value[KeyTypeAssertion].disabled = false
   }
 }
 
 const getDetailNotice = async () => {
-  const notice = await getNoticeById(props.noticeId)
+  const notice = await getNoticeById(props.noticeId as number)
   return notice
 }
 
@@ -73,8 +76,9 @@ const initModify = async () => {
   const data = await getDetailNotice()
   const keys = Object.keys(formData.value)
   for (const key of keys) {
-    formData.value[key].value = data[key]
-    formData.value[key].disabled = false
+    const KeyTypeAssertion = key as keyof NoticeFormData;
+    formData.value[KeyTypeAssertion].value = data[KeyTypeAssertion]
+    formData.value[KeyTypeAssertion].disabled = false
   }
 }
 
@@ -82,23 +86,43 @@ const initDetail = async () => {
   const data = await getDetailNotice()
   const keys = Object.keys(formData.value)
   for (const key of keys) {
-    formData.value[key].value = data[key]
-    formData.value[key].disabled = true
+    const KeyTypeAssertion = key as keyof NoticeFormData;
+    formData.value[KeyTypeAssertion].value = data[KeyTypeAssertion]
+    formData.value[KeyTypeAssertion].disabled = true
   }
 }
 
-const makeBody = async (id) =>{
+const makePostBody = async () =>{
+  const result: postNoticeBody= {
+    noticeTitle: '',
+    noticeContent: '',
+  };
   const keys = Object.keys(formData.value);
-  const result = { };
   for(const key of keys){
-    result[key] = formData.value[key].value;
+    const KeyTypeAssertion = key as keyof NoticeFormData;
+    result[KeyTypeAssertion] = formData.value[KeyTypeAssertion].value;
   }
-  if(props.modalStatus==='modify')result.noticeId = props.noticeId
+  return result;
+}
+
+const makePutBody = async (id?: number) =>{
+  const result: putNoticeBody= {
+    noticeTitle: '',
+    noticeContent: '',
+  };
+
+  const keys = Object.keys(formData.value);
+  for(const key of keys){
+    const KeyTypeAssertion = key as keyof NoticeFormData;
+    result[KeyTypeAssertion] = formData.value[KeyTypeAssertion].value;
+  }
+  if(props.modalStatus==='modify') result.noticeId = id;
   return result;
 }
 
 const createNotice = async () =>{
-  const data = await postNotice(makeBody());
+  const body = await makePostBody();
+  const data = await postNotice(body);
   if(data.code===200){
     Swal.fire({
       icon: 'success',
@@ -116,8 +140,7 @@ const createNotice = async () =>{
 }
 
 const updateNotice = async () =>{
-  const body = await makeBody(props.noticeId);
-  console.log(body)
+  const body = await makePutBody(props.noticeId);
   const data = await putNoticeById(body);
   if(data.code===200){
     Swal.fire({

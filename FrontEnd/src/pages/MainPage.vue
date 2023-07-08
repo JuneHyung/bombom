@@ -4,7 +4,7 @@
   <MapInfo></MapInfo>
   <BottomSection></BottomSection>
 </template>
-<script setup> 
+<script setup lang="ts"> 
 import MainBanner from '@/components/main/MainBanner.vue';
 import MapInfo from '@/components/main/MapInfo.vue';
 import MiddleSection from '@/components/main/MiddleSection.vue';
