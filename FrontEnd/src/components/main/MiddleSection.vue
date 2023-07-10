@@ -47,5 +47,5 @@
 </template>
 <script setup>
 import IntroduceSection from '@/components/main/IntroduceSection.vue'
-import { ABOUT_BOMBOM, BRAND_CONCEPT } from '@/constant/mainPageText.js'
+import { ABOUT_BOMBOM, BRAND_CONCEPT } from '@/constant/mainPageText'
 </script>

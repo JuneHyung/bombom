@@ -1,4 +1,6 @@
-export const ABOUT_BOMBOM = {
+import type { IntroduceText,  LocationInfoList } from "@/types/main"
+
+export const ABOUT_BOMBOM:IntroduceText = {
   title: 'The Cafe 봄봄',
   subtitle01: 'Take-Out 전문 브랜드 Cafe 봄봄',
   subtitle02: `차별화를 추구하여 보다 성장하는 Cafe 봄봄`,
@@ -18,7 +20,7 @@ export const ABOUT_BOMBOM = {
   introduceImg: `src/assets/images/introduce01.png`
 }
 
-export const BRAND_CONCEPT = {
+export const BRAND_CONCEPT: IntroduceText = {
   title: 'Brand Concept',
   subtitle01: `'봄(Spring)'을 '보다'`,
   // subtitle02: `차별화를 추구하여 보다 성장하는 Cafe 봄봄`,
@@ -34,7 +36,7 @@ export const BRAND_CONCEPT = {
   introduceImg: `src/assets/images/introduce02.png`
 }
 
-export const DAEGU_LOCATION = [{
+export const DAEGU_LOCATION:LocationInfoList = [{
   name: '본점위치', 
   address: `대구광역시 중구 동덕로 125(삼덕동 2가 101-1번지)`
 },
@@ -44,12 +46,12 @@ export const DAEGU_LOCATION = [{
 }
 ]
 
-export const DAEJEON_LOCATION = [{
+export const DAEJEON_LOCATION:LocationInfoList = [{
   name: '대전 교육장', 
   address: `대구광역시 수성구 달구벌대로 2280(수성동1가 89-42) 4층`
 }]
 
-export const INTRODUCE_BOMBOM = {
+export const INTRODUCE_BOMBOM: IntroduceText = {
   title: `Cafe 봄봄은 take-out 전문 카페로 출발하였습니다.`,
   explain01: [
     `차별화 된 메뉴로 대학가에서 많은 학생들의 사랑을 받았습니다.`,

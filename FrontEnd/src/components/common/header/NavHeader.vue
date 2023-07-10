@@ -15,13 +15,13 @@
     </nav>
   </header>
 </template>
-<script setup>
+<script setup lang="ts">
 import {FIXED_MENU_LIST} from '@/constant/menuList';
 import { defineAsyncComponent, computed } from 'vue';
-import {useUserStore} from '@/stores/user.js';
+import {useUserStore} from '@/stores/user';
 
-const BeforeLogInItem = defineAsyncComponent(()=>import('@/components/common/header/BeforeLoginItem.vue'));
-const AfterLogInItem = defineAsyncComponent(()=>import('@/components/common/header/AfterLoginItem.vue'));
+const BeforeLogInItem = defineAsyncComponent(()=>import('@/components/common/header/BeforeLogInItem.vue'));
+const AfterLogInItem = defineAsyncComponent(()=>import('@/components/common/header/AfterLogInItem.vue'));
 
 const userStore = useUserStore();
 const changeableItemByLogIn =computed(()=>userStore.isLogin ? AfterLogInItem : BeforeLogInItem)

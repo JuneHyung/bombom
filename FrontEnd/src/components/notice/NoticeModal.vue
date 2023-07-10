@@ -36,8 +36,8 @@
 </template>
 <script setup lang="ts">
 import CustomModal from '@/components/common/CustomModal.vue'
-import { getNoticeById, postNotice, putNoticeById } from '@/api/notices.js'
-import { useModalStore } from '@/stores/modal.js'
+import { getNoticeById, postNotice, putNoticeById } from '@/api/notices'
+import { useModalStore } from '@/stores/modal'
 import { onUpdated, ref, type Ref } from 'vue'
 import Swal from 'sweetalert2';
 import type { NoticeFormData, postNoticeBody, putNoticeBody } from '@/types/notices';

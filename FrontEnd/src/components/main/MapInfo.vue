@@ -17,9 +17,10 @@
     </div>
   </template>
 </template>
-<script setup>
+<script setup lang="ts">
 import IntroduceSection from '@/components/main/IntroduceSection.vue'
 import KakaoMap from '@/components/common/KakaoMap.vue'
-import { DAEGU_LOCATION, DAEJEON_LOCATION } from '@/constant/mainPageText.js'
-const textList = [DAEGU_LOCATION, DAEJEON_LOCATION]
+import { DAEGU_LOCATION, DAEJEON_LOCATION } from '@/constant/mainPageText'
+import type { LocationInfoList } from '@/types/main';
+const textList:LocationInfoList[] = [DAEGU_LOCATION, DAEJEON_LOCATION]
 </script>

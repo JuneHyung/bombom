@@ -53,7 +53,7 @@
 
 <script setup>
 import { computed, onBeforeMount, onMounted, ref } from 'vue'
-import { getAllShops, getShopsByLocName } from '@/api/shops.js'
+import { getAllShops, getShopsByLocName } from '@/api/shops'
 import KakaoMap from '@/components/common/KakaoMap.vue'
 import _ from 'lodash'
 const pageIdx = ref(0) // pag

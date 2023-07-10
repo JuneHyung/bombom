@@ -24,11 +24,11 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { useUserStore } from '@/stores/user.js'
+import { useUserStore } from '@/stores/user'
 import { useRouter } from 'vue-router'
-import {postCheckPassword} from '@/api/users.js';
+import {postCheckPassword} from '@/api/users';
 import Swal from 'sweetalert2';
 const router = useRouter();
 const userStore = useUserStore();

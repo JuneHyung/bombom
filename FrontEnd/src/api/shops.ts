@@ -7,14 +7,13 @@ export const getAllShops = async () =>{
     const res = await getFetch(`${url}/shops`)
     const data = await res.json();
     return data;
-
   }catch(err){
     console.error(`Error : ${err}`)
     throw err;
   }
 }
 
-export const getShopsByLocName = async (locName) =>{
+export const getShopsByLocName = async (locName: string) =>{
   try{
     const res = await getFetch(`${url}/shops`, locName)
     const data = await res.json();

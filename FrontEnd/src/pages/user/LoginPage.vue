@@ -25,12 +25,12 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import {useRouter} from 'vue-router';
-import {postUserLogin, postToken} from '@/api/users.js';
+import {postUserLogin, postToken} from '@/api/users';
 import { ref } from 'vue';
 import Swal from 'sweetalert2';
-import {useUserStore} from '@/stores/user.js';
+import {useUserStore} from '@/stores/user';
 import jwt_decode from 'jwt-decode';
 
 const router = useRouter();
@@ -44,7 +44,7 @@ const formData = ref({
   userPw: { value: '', placeholder: '비밀번호를 입력해주세요.', label: '비밀번호', type:'password' },
 })
 
-async function saveTokenToLocalStorage(token) {
+async function saveTokenToLocalStorage(token: string) {
   localStorage.setItem('token', token);
   router.push({name: 'Main'})
 }

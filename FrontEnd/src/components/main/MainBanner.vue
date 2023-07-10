@@ -9,14 +9,15 @@
     </template>
   </ul>
 </template>
-<script setup>
+<script setup lang="ts">
+import type { BannerItem } from '@/types/main';
 import { onBeforeUnmount, onMounted, ref } from 'vue'
-const props = defineProps({
-  bannerList: Array
-})
+const props = defineProps<{
+  bannerList: BannerItem[],
+}>();
 const curIdx = ref(0)
 
-let countCurIdx = null;
+let countCurIdx:any  = null;
 
 onMounted(() => {
   countCurIdx = setInterval(() => {

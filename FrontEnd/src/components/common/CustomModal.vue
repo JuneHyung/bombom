@@ -17,13 +17,10 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import {useModalStore} from '@/stores/modal'
 const modalStore = useModalStore();
 
-const openModal = () =>{
-  modalStore.toogleIsOpen(true);
-}
 const closeModal = () =>{
   modalStore.toogleIsOpen(false);
 }

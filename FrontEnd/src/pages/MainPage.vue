@@ -9,8 +9,9 @@ import MainBanner from '@/components/main/MainBanner.vue';
 import MapInfo from '@/components/main/MapInfo.vue';
 import MiddleSection from '@/components/main/MiddleSection.vue';
 import BottomSection from '@/components/main/BottomSection.vue';
+import type { BannerItem } from '@/types/main';
 
-const bannerList = [
+const bannerList: BannerItem[] = [
   {url:'src/assets/images/banners/banner01.jpg', alt: 'banner01이미지'},
   {url:'src/assets/images/banners/banner02.jpg', alt: 'banner02이미지'},
   {url:'src/assets/images/banners/banner03.jpg', alt: 'banner03이미지'},

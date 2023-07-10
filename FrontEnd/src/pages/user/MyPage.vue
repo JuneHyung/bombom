@@ -29,15 +29,16 @@
     </div>
   </div>
 </template>
-<script setup>
-import { onMounted, ref } from 'vue'
-import { useUserStore } from '@/stores/user.js'
+<script setup lang="ts">
+import { onMounted, ref, type Ref } from 'vue'
+import { useUserStore } from '@/stores/user'
 import { useRouter } from 'vue-router'
-import {putUserInfo, deleteUserInfo} from '@/api/users.js'
+import {putUserInfo, deleteUserInfo} from '@/api/users'
 import Swal from 'sweetalert2';
+import type { UserFormData } from '@/types/user';
 const router = useRouter()
 const userStore = useUserStore()
-const formData = ref({
+const formData: Ref<UserFormData> = ref({
   userId: { value: '', placeholder: '아이디를 입력해주세요.', disabled: true ,label: '아이디', type:'text'},
   userPw: { value: '', placeholder: '새 비밀번호를 입력해주세요.', disabled: false,label: '비밀번호', type:'password' },
   userName: { value: '', placeholder: '이름을 입력해주세요.', disabled: false,label: '이름', type:'text' },
@@ -66,7 +67,7 @@ const deleteAccount = async () => {
   }
 }
 
-const makeBody = (body) =>{
+const makeBody = (body: UserFormData) =>{
   const result = {
     userId: body.userId.value,
     userPw: body.userPw.value,
@@ -79,7 +80,7 @@ const makeBody = (body) =>{
 }
 
 const moveBack = () => {
-  router.push({common: 'Main'})
+  router.push({name: 'Main'})
 }
 
 const updateAccount = async () => {
@@ -108,13 +109,14 @@ const initUserInfo = () => {
   const userInfo = userStore.userInfo
   const keys = Object.keys(formData.value)
   for (const key of keys) {
-    formData.value[key].value = userInfo[key]
+    const keyTypeAssertion = key as keyof UserFormData;
+    formData.value[keyTypeAssertion].value = userInfo[key]
   }
 }
 
 onMounted(() => {
   const isLogin = userStore.isLogin
-  if (!isLogin) router.push({ common: 'Main' })
+  if (!isLogin) router.push({ name: 'Main' })
   else {
     initUserInfo()
   }

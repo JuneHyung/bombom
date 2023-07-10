@@ -17,7 +17,7 @@
     </IntroduceSection>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import IntroduceSection from '@/components/main/IntroduceSection.vue'
-import { INTRODUCE_BOMBOM } from '@/constant/mainPageText.js'
+import { INTRODUCE_BOMBOM } from '@/constant/mainPageText'
 </script>

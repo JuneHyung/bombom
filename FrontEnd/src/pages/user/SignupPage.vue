@@ -27,10 +27,10 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang ="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { postUser } from '@/api/users.js'
+import { postUser } from '@/api/users'
 import Swal from 'sweetalert2'
 const router = useRouter()
 const formData = ref({

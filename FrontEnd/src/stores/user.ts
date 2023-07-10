@@ -1,5 +1,6 @@
 // import { ref, computed } from 'vue'
 // import type { UserInfo } from '@/types/user';
+import type { UserInfo } from '@/types/user';
 import { defineStore } from 'pinia'
 
 export const useUserStore = defineStore({
@@ -25,14 +26,14 @@ export const useUserStore = defineStore({
         this.userInfo[key] = '';
       }
     },
-    setUserInfo(info){
+    setUserInfo(info: UserInfo){
       const keys = Object.keys(info);
       this.initUserInfo();
       for(const key of keys){
         this.userInfo[key] = info[key];
       }
     },
-    setIsLogin(flag){
+    setIsLogin(flag: boolean){
       this.isLogin = flag;
       if(!flag) this.initUserInfo();
     },

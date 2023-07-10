@@ -6,8 +6,8 @@
   </li>
   <button class="logout-button" @click="logout">LOGOUT</button>
 </template>
-<script setup>
-import {useUserStore} from '@/stores/user.js';
+<script setup lang="ts">
+import {useUserStore} from '@/stores/user';
 const userStore = useUserStore();
 
 const logout = () =>{

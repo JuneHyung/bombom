@@ -63,11 +63,11 @@
 import NoticeModal from '@/components/notice/NoticeModal.vue'
 import MdiIcon from '@/components/common/MdiIcon.vue'
 // import noticeData from '@/constant/noticeData.json'
-import { getAllNotices, deleteNoticeById } from '@/api/notices.js'
+import { getAllNotices, deleteNoticeById } from '@/api/notices'
 import { computed, onMounted, ref, watch, type Ref, type ComputedRef } from 'vue'
 import Swal from 'sweetalert2'
-import { useUserStore } from '@/stores/user.js'
-import { useModalStore } from '@/stores/modal.js'
+import { useUserStore } from '@/stores/user'
+import { useModalStore } from '@/stores/modal'
 import type {NoticeList} from '@/types/notices'
 const userStore = useUserStore()
 const modalStore = useModalStore()
