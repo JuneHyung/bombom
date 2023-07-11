@@ -56,7 +56,7 @@ const deleteAccount = async () => {
       title: 'SUCCESS',
       text: data.message
     });
-    userStore.setIsLogin(false);
+    userStore.logout();
     router.back();
   }
   else{
