@@ -41,7 +41,9 @@ const setBounds = (bounds) => {
 
 // 지도 init
 const initMap = () => {
-
+  // if(window.kakao || window.kakao.maps){
+    
+  // }
   // default 지도 setting
   const options = {
     center: new kakao.maps.LatLng(centerPos.lat, centerPos.lng),
@@ -91,7 +93,9 @@ const initScript = () => {
   }
 }
 
+
 onMounted(() => {
+  console.log(props.addressList)
   initScript();
 })
 onUpdated(()=>{

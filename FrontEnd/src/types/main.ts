@@ -8,8 +8,8 @@ export interface IntroduceText {
 }
 
 export interface LocationInfo {
-  name: string,
-  address: string,
+  shopName: string,
+  shopAddress: string,
 }
 
 export type LocationInfoList = LocationInfo[]

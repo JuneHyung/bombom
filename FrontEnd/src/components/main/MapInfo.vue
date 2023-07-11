@@ -4,8 +4,8 @@
       <IntroduceSection>
         <template #left-pannel>
           <div class="text-pannel">
-            <h1>{{ loc[0].name }}</h1>
-            <div>{{ loc[0].address }}</div>
+            <h1>{{ loc[0].shopName }}</h1>
+            <div>{{ loc[0].shopAddress }}</div>
           </div>
         </template>
         <template #right-pannel>
