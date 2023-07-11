@@ -7,11 +7,11 @@
       <form class="common-form-box">
         <template v-for="(key, idx) in Object.keys(formData)" :key="idx">
           <label :for="key" class="common-input-wrap">
-            <span class="common-input-label">{{ formData[key].label }}</span>
+            <span class="common-input-label">{{ formData[key as keyof UserFormData].label }}</span>
             <input
-              :type="formData[key].type"
-              :placeholder="formData[key].placeholder"
-              v-model="formData[key].value"
+              :type="formData[key as keyof UserFormData].type"
+              :placeholder="formData[key as keyof UserFormData].placeholder"
+              v-model="formData[key as keyof UserFormData].value"
               class="common-input"
             />
           </label>
@@ -28,12 +28,13 @@
   </div>
 </template>
 <script setup lang ="ts">
-import { ref } from 'vue'
+import { type Ref, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { postUser } from '@/api/users'
 import Swal from 'sweetalert2'
+import type { UserFormData, SignupRequestBody } from '@/types/user';
 const router = useRouter()
-const formData = ref({
+const formData: Ref<UserFormData> = ref({
   userId: { value: '', placeholder: '아이디를 입력해주세요.', label: '아이디', type:'text' },
   userPw: { value: '', placeholder: '비밀번호를 입력해주세요.', label: '비밀번호', type:'password' },
   userName: { value: '', placeholder: '이름을 입력해주세요.', label: '이름', type:'text' },
@@ -47,9 +48,9 @@ const moveBack = () => {
 }
 const resetFormData = () => {
   const keys = Object.keys(formData.value)
-  for (const key of keys) formData.value[key].value = ''
+  for (const key of keys) formData.value[key as keyof UserFormData].value = ''
 }
-const makeBody = (body) => {
+const makeBody = (body: UserFormData ): SignupRequestBody => {
   const result = {
     userId: body.userId.value,
     userPw: body.userPw.value,
@@ -58,7 +59,7 @@ const makeBody = (body) => {
     userAddress: body.userAddress.value,
     userTel: body.userTel.value,
     isAdmin: false,
-    joinDate: new Date()
+    joinDate: new Date().toString()
   }
   return result
 }
@@ -75,7 +76,7 @@ const signUp = async () => {
     router.push({ name: 'Login' })
   } else {
     Swal.fire({
-      icon: 'ERROR',
+      icon: 'error',
       title: 'ERROR!',
       text: data.message
     })

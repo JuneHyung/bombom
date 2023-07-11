@@ -51,19 +51,20 @@
   </div>
 </template>
 
-<script setup>
-import { computed, onBeforeMount, onMounted, ref } from 'vue'
+<script setup lang="ts">
+import { computed, onBeforeMount, onMounted, type Ref, ref } from 'vue'
 import { getAllShops, getShopsByLocName } from '@/api/shops'
 import KakaoMap from '@/components/common/KakaoMap.vue'
 import _ from 'lodash'
+import type { ShopList, ShopsMapList } from '@/types/shops';
 const pageIdx = ref(0) // pag
 const typeIdx = ref(0)
-const typeList = ref([])
-const numList = ref([])
+const typeList: Ref<string[]> = ref([])
+const numList: Ref<number[]> = ref([])
 const maxCnt = 10
 
-const shopsData = ref([])
-const shopsMapData = ref([])
+const shopsData: Ref<ShopList> = ref([])
+const shopsMapData: Ref<ShopsMapList> = ref([])
 
 const shopsList = computed(() => {
   return pageIdx.value * maxCnt + maxCnt < shopsData.value.length
@@ -74,14 +75,14 @@ const headLabelList = ['지역', '매장명', '주소', '전화번호'];
 
 const getAllShopsList = async () => {
   const data = await getAllShops()
-  typeList.value = [...new Set(data.map((el) => el.locName))]
+  typeList.value = [...new Set(data.map((el) => el.locName))] as string[];
 }
 
 const getShopsListByLocName = async (locName = '') => {
   const data = await getShopsByLocName(locName)
   shopsData.value = data
   shopsMapData.value = data.map((el) => {
-    return { name: el.shopName, address: el.shopAddress }
+    return { shopName: el.shopName, shopAddress: el.shopAddress }
   })
   const num = Math.ceil(shopsData.value.length / maxCnt)
   numList.value = Array.from({ length: num }, (_, i) => i + 1)
@@ -90,7 +91,7 @@ const getShopsListByLocName = async (locName = '') => {
 }
 
 
-const changePageIdx = (idx) => {
+const changePageIdx = (idx: number) => {
   const end = Math.ceil(shopsData.value.length / maxCnt)
   if (idx < 0) pageIdx.value = idx + 1
   else if (idx >= 0 && idx < end) pageIdx.value = idx

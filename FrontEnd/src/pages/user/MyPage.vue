@@ -7,12 +7,12 @@
       <form class="common-form-box">
         <template v-for="(key, idx) in Object.keys(formData)" :key="idx">
           <label :for="key" class="common-input-wrap">
-            <span class="common-input-label">{{ formData[key].label }}</span>
+            <span class="common-input-label">{{ formData[key as keyof UserFormData].label }}</span>
             <input
-              :type="formData[key].type"
-              :placeholder="formData[key].placeholder"
-              :disabled="formData[key].disabled"
-              v-model="formData[key].value"
+              :type="formData[key as keyof UserFormData].type"
+              :placeholder="formData[key as keyof UserFormData].placeholder"
+              :disabled="formData[key as keyof UserFormData].disabled"
+              v-model="formData[key as keyof UserFormData].value"
               class="common-input"
               :class="{'disabled-input': key==='userId' && formData.userId.disabled}"
             />
@@ -35,7 +35,8 @@ import { useUserStore } from '@/stores/user'
 import { useRouter } from 'vue-router'
 import {putUserInfo, deleteUserInfo} from '@/api/users'
 import Swal from 'sweetalert2';
-import type { UserFormData } from '@/types/user';
+import type { UpdateRequestBody, UserFormData } from '@/types/user';
+
 const router = useRouter()
 const userStore = useUserStore()
 const formData: Ref<UserFormData> = ref({
@@ -67,7 +68,7 @@ const deleteAccount = async () => {
   }
 }
 
-const makeBody = (body: UserFormData) =>{
+const makeBody = (body: UserFormData): UpdateRequestBody =>{
   const result = {
     userId: body.userId.value,
     userPw: body.userPw.value,
@@ -109,8 +110,7 @@ const initUserInfo = () => {
   const userInfo = userStore.userInfo
   const keys = Object.keys(formData.value)
   for (const key of keys) {
-    const keyTypeAssertion = key as keyof UserFormData;
-    formData.value[keyTypeAssertion].value = userInfo[key]
+    formData.value[ key as keyof UserFormData].value = userInfo[key]
   }
 }
 

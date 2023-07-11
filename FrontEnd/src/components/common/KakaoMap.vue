@@ -62,10 +62,10 @@ const initMap = () => {
    */
 
   for (const address of props.addressList) {
-    geocoder.addressSearch(address.address, (result, status) => {
+    geocoder.addressSearch(address.shopAddress, (result, status) => {
       if (status === kakao.maps.services.Status.OK) {
         const coords = new kakao.maps.LatLng(result[0].y, result[0].x)
-        initMarker(address.name, coords)
+        initMarker(address.shopName, coords)
         bounds.extend(coords)
         setBounds(bounds)
       }

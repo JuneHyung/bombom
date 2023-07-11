@@ -65,8 +65,8 @@ exports.postUsers = async (req, res, next) => {
 }
 
 exports.postLogin = async (req, res, next) =>{
-  const userInfo = await User.findOne({where: {userId: req.body.id}});
-  if(!userInfo || req.body.password !== userInfo.userPw) res.status(400).json({code: 400, message: '아이디 또는 비밀번호를 확인해주세요.' });
+  const userInfo = await User.findOne({where: {userId: req.body.userId}});
+  if(!userInfo || req.body.userPw !== userInfo.userPw) res.status(400).json({code: 400, message: '아이디 또는 비밀번호를 확인해주세요.' });
   else{
     const result = {
       userId: userInfo.userId,
@@ -79,8 +79,8 @@ exports.postLogin = async (req, res, next) =>{
 }
 
 exports.postCheckPassword = async (req, res, next) =>{
-  const userInfo = await User.findOne({where: {userId: req.body.id}});
-  if(req.body.password === userInfo.userPw){
+  const userInfo = await User.findOne({where: {userId: req.body.userId}});
+  if(req.body.userPw === userInfo.userPw){
     res.status(200).json({code: 200, message: 'SUCCESS'});
   }else{
     res.status(400).json({code: 400, message: '비밀번호가 맞지 않습니다.' });

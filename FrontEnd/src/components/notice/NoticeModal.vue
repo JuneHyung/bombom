@@ -50,7 +50,7 @@ const props = defineProps({
 const modalStore = useModalStore()
 
 const closeCreateModal = () => {
-  modalStore.toogleIsOpen(false);
+  modalStore.toggleIsOpen(false);
 }
 
 const formData: Ref<NoticeFormData> = ref({

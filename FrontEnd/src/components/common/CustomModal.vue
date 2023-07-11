@@ -22,6 +22,6 @@ import {useModalStore} from '@/stores/modal'
 const modalStore = useModalStore();
 
 const closeModal = () =>{
-  modalStore.toogleIsOpen(false);
+  modalStore.toggleIsOpen(false);
 }
 </script>

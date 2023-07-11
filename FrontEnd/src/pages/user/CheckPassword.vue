@@ -9,7 +9,7 @@
         <label for="" class="common-input-wrap">
           <span class="common-input-label">{{ formData.userPw.label }}</span>
           <input
-            :type="formData.userPw.placeholder"
+            :type="formData.userPw.type"
             :placeholder="formData.userPw.placeholder"
             v-model="formData.userPw.value"
             :disabled="formData.userPw.disabled"
@@ -42,8 +42,8 @@ const moveBack = () => {
 
 const checkPassword = async () => {
   const body = {
-    id: userStore.userInfo.userId,
-    password: formData.value.userPw.value
+    userId: userStore.userInfo.userId,
+    userPw: formData.value.userPw.value
   }
   const data = await postCheckPassword(body);
   if(data.code===200){

@@ -109,19 +109,19 @@ const getAllNoticesList = async () => {
 const getNoticeDetail = async (id:number) => {
   noticeId.value = id;
   modalStatus.value = 'detail';
-  modalStore.toogleIsOpen(true)
+  modalStore.toggleIsOpen(true)
 }
 
 const createNotice = async () =>{
   noticeId.value = 0;
   modalStatus.value = 'edit';
-  modalStore.toogleIsOpen(true)
+  modalStore.toggleIsOpen(true)
 }
 
 const modifyNotice = async (id: number) =>{
   noticeId.value = id;
   modalStatus.value = 'modify';
-  modalStore.toogleIsOpen(true)
+  modalStore.toggleIsOpen(true)
 }
 
 const deleteNotice = async (id: number) => {

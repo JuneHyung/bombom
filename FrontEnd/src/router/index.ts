@@ -10,6 +10,7 @@ import CheckPassword from '@/pages/user/CheckPassword.vue';
 
 import jwt_decode from 'jwt-decode';
 import {useUserStore} from '@/stores/user';
+import type { UserInfo } from '@/types/user';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -61,7 +62,7 @@ router.beforeEach((to,from,next)=>{
   const token = localStorage.getItem('token');
   if(token){
     const userStore = useUserStore();
-    const decoded = jwt_decode(token);
+    const decoded: any = jwt_decode(token);
     userStore.setUserInfo(decoded);
     userStore.setIsLogin(true);
     const currentTime = Date.now() / 1000;

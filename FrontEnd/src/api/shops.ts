@@ -1,8 +1,9 @@
+import type { ShopList } from "@/types/shops";
 import { getFetch } from ".";
 
 const url = import.meta.env.VITE_BACKEND_API_URL;
 
-export const getAllShops = async () =>{
+export const getAllShops = async (): Promise<ShopList> =>{
   try{
     const res = await getFetch(`${url}/shops`)
     const data = await res.json();
@@ -13,7 +14,7 @@ export const getAllShops = async () =>{
   }
 }
 
-export const getShopsByLocName = async (locName: string) =>{
+export const getShopsByLocName = async (locName: string): Promise<ShopList> =>{
   try{
     const res = await getFetch(`${url}/shops`, locName)
     const data = await res.json();

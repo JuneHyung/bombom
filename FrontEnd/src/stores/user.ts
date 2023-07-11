@@ -1,42 +1,41 @@
 // import { ref, computed } from 'vue'
 // import type { UserInfo } from '@/types/user';
-import type { UserInfo } from '@/types/user';
+import type { SignupRequestBody, UserInfo } from '@/types/user';
 import { defineStore } from 'pinia'
+import {ref, type Ref} from 'vue';
+export const useUserStore = defineStore('user-store', ()=>{
+  const userInfo: Ref<UserInfo> = ref({
+    userId: '',
+    userName: '',
+    userEmail: '',
+    userAddress: '',
+    userTel: '',
+    isAdmin: false,
+    joinDate: '',
+  });
+  const isLogin = ref(false);
 
-export const useUserStore = defineStore({
-  id: 'user-store',
-  state: () =>{
-    return{
-      userInfo: {
-        userId: '',
-        userName: '',
-        userEmail: '',
-        userAddress: '',
-        userTel: '',
-        isAdmin: false,
-        joinDate: '',
-      },
-      isLogin: false,
+  function initUserInfo() {
+    const keys = Object.keys(userInfo.value);
+    for(const key of keys){
+      userInfo.value[key as keyof UserInfo] = '';
     }
-  },
-  actions:{
-    initUserInfo(){
-      const keys = Object.keys(this.userInfo);
-      for(const key of keys){
-        this.userInfo[key] = '';
-      }
-    },
-    setUserInfo(info: UserInfo){
-      const keys = Object.keys(info);
-      this.initUserInfo();
-      for(const key of keys){
-        this.userInfo[key] = info[key];
-      }
-    },
-    setIsLogin(flag: boolean){
-      this.isLogin = flag;
-      if(!flag) this.initUserInfo();
-    },
-    getIsLogin() {return this.isLogin}
+  }
+  function setUserInfo(info: UserInfo){
+    const keys = Object.keys(info);
+    initUserInfo();
+    for(const key of keys){
+      userInfo.value[key as keyof UserInfo] = info[key];
+    }
+  }
+  function setIsLogin(flag:boolean){
+    isLogin.value = flag;
+    if(!flag) initUserInfo();
+  }
+  function getIsLogin(){
+    return isLogin.value;
+  }
+  return {
+    userInfo,isLogin,initUserInfo, setUserInfo, setIsLogin, getIsLogin
   }
 })

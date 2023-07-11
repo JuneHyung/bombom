@@ -1,10 +1,12 @@
 export interface TextInput{
   value: string,
   placeholder?: string,
-  disabled?: boolean
+  disabled?: boolean,
+  label?: string,
+  type?: string
 }
 
-export type CustomResponse = {
+export interface CustomResponse {
   code: number,
   message: string,
 }

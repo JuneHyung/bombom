@@ -7,11 +7,11 @@
       <form class="common-form-box">
         <template v-for="(key, idx) in Object.keys(formData)" :key="idx">
           <label :for="key" class="common-input-wrap">
-            <span class="common-input-label">{{ formData[key].label }}</span>
+            <span class="common-input-label">{{ formData[key as keyof LoginFormData].label }}</span>
             <input
-              :type="formData[key].type"
-              :placeholder="formData[key].placeholder"
-              v-model="formData[key].value"
+              :type="formData[key as keyof LoginFormData].type"
+              :placeholder="formData[key as keyof LoginFormData].placeholder"
+              v-model="formData[key as keyof LoginFormData].value"
               class="common-input"
             />
           </label>
@@ -27,19 +27,19 @@
 </template>
 <script setup lang="ts">
 import {useRouter} from 'vue-router';
-import {postUserLogin, postToken} from '@/api/users';
-import { ref } from 'vue';
+import {postUserLogin} from '@/api/users';
+import { ref, type Ref } from 'vue';
 import Swal from 'sweetalert2';
-import {useUserStore} from '@/stores/user';
-import jwt_decode from 'jwt-decode';
+
+import type { LoginFormData } from '@/types/user';
 
 const router = useRouter();
-const userStore = useUserStore();
+
 const moveSignup = () =>{
   router.push({name: 'Signup'})
 }
 
-const formData = ref({
+const formData:Ref<LoginFormData> = ref({
   userId: { value: '', placeholder: '아이디를 입력해주세요.', label: '아이디', type:'text' },
   userPw: { value: '', placeholder: '비밀번호를 입력해주세요.', label: '비밀번호', type:'password' },
 })
@@ -51,8 +51,8 @@ async function saveTokenToLocalStorage(token: string) {
 
 const moveLogin = async () =>{
   const body = {
-    id: formData.value.userId.value,
-    password: formData.value.userPw.value
+    userId: formData.value.userId.value,
+    userPw: formData.value.userPw.value
   }
 
   const data = await postUserLogin(body);
