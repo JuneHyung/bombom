@@ -9,15 +9,15 @@
   },
   {
     "id": 2,
-    "menuName": "바닐라 라떼",
-    "menuPrice": 1800,
+    "menuName": "카페 라떼",
+    "menuPrice": 2300,
     "menuType": "coffee",
     "menuNew": 0,
     "menuImg": "src/assets/images/menu/coffee/menu01_img02.png"
   },
   {
     "id": 3,
-    "menuName": "아이스 아메리카노",
+    "menuName": "카푸치노",
     "menuPrice": 1800,
     "menuType": "coffee",
     "menuNew": 0,
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "menuName": "아이스 아메리카노",
+    "menuName": "카라멜 마끼야또",
     "menuPrice": 1800,
     "menuType": "coffee",
     "menuNew": 0,
@@ -33,7 +33,7 @@
   },
   {
     "id": 5,
-    "menuName": "아이스 아메리카노",
+    "menuName": "카페모카",
     "menuPrice": 1800,
     "menuType": "coffee",
     "menuNew": 0,
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "menuName": "아이스 아메리카노",
+    "menuName": "어른커피",
     "menuPrice": 1800,
     "menuType": "coffee",
     "menuNew": 0,
@@ -49,7 +49,7 @@
   },
   {
     "id": 7,
-    "menuName": "아이스 아메리카노",
+    "menuName": "빅아메리카노",
     "menuPrice": 1800,
     "menuType": "coffee",
     "menuNew": 0,
@@ -57,7 +57,7 @@
   },
   {
     "id": 8,
-    "menuName": "아이스 아메리카노",
+    "menuName": "바닐라 라떼",
     "menuPrice": 1800,
     "menuType": "coffee",
     "menuNew": 0,
@@ -65,7 +65,7 @@
   },
   {
     "id": 9,
-    "menuName": "아이스 아메리카노",
+    "menuName": "헤이즐넛 아메리카노",
     "menuPrice": 1800,
     "menuType": "coffee",
     "menuNew": 0,
@@ -73,7 +73,7 @@
   },
   {
     "id": 10,
-    "menuName": "아이스 아메리카노",
+    "menuName": "더치라떼",
     "menuPrice": 1800,
     "menuType": "coffee",
     "menuNew": 0,
@@ -81,7 +81,7 @@
   },
   {
     "id": 11,
-    "menuName": "아이스 아메리카노",
+    "menuName": "헤이즐넛 라떼",
     "menuPrice": 1800,
     "menuType": "coffee",
     "menuNew": 0,
@@ -89,7 +89,7 @@
   },
   {
     "id": 12,
-    "menuName": "바닐라 라떼",
+    "menuName": "초코 라떼",
     "menuPrice": 2300,
     "menuType": "latte",
     "menuNew": 0,
@@ -97,7 +97,7 @@
   },
   {
     "id": 13,
-    "menuName": "바닐라 라떼",
+    "menuName": "녹차 라떼",
     "menuPrice": 2300,
     "menuType": "latte",
     "menuNew": 0,
@@ -105,7 +105,7 @@
   },
   {
     "id": 14,
-    "menuName": "아이스 아메리카노",
+    "menuName": "오곡 라뗴",
     "menuPrice": 2300,
     "menuType": "latte",
     "menuNew": 0,
@@ -113,7 +113,7 @@
   },
   {
     "id": 15,
-    "menuName": "아이스 아메리카노",
+    "menuName": "민트 초코",
     "menuPrice": 2300,
     "menuType": "latte",
     "menuNew": 0,
@@ -121,7 +121,7 @@
   },
   {
     "id": 16,
-    "menuName": "아이스 아메리카노",
+    "menuName": "고구마 라떼",
     "menuPrice": 2300,
     "menuType": "latte",
     "menuNew": 0,
@@ -129,7 +129,7 @@
   },
   {
     "id": 17,
-    "menuName": "아이스 아메리카노",
+    "menuName": "밀크티",
     "menuPrice": 2300,
     "menuType": "latte",
     "menuNew": 0,
@@ -137,95 +137,23 @@
   },
   {
     "id": 18,
-    "menuName": "아이스 아메리카노",
+    "menuName": "폭탄초코",
     "menuPrice": 2300,
     "menuType": "latte",
     "menuNew": 0,
     "menuImg": "src/assets/images/menu/latte/menu02_img07.png"
   },
   {
-    "id": 19,
-    "menuName": "아이스 아메리카노",
-    "menuPrice": 2300,
-    "menuType": "latte",
-    "menuNew": 0,
-    "menuImg": "src/assets/images/menu/latte/menu02_img08.png"
-  },
-  {
-    "id": 20,
-    "menuName": "아이스 아메리카노",
-    "menuPrice": 2300,
-    "menuType": "latte",
-    "menuNew": 0,
-    "menuImg": "src/assets/images/menu/latte/menu02_img09.png"
-  },
-  {
-    "id": 21,
-    "menuName": "아이스 아메리카노",
-    "menuPrice": 2300,
-    "menuType": "latte",
-    "menuNew": 0,
-    "menuImg": "src/assets/images/menu/latte/menu02_img10.png"
-  },
-  {
-    "id": 22,
-    "menuName": "아이스 아메리카노",
-    "menuPrice": 2300,
-    "menuType": "latte",
-    "menuNew": 0,
-    "menuImg": "src/assets/images/menu/latte/menu02_img11.png"
-  },
-  {
-    "id": 23,
-    "menuName": "아이스 아메리카노",
-    "menuPrice": 2300,
-    "menuType": "latte",
-    "menuNew": 0,
-    "menuImg": "src/assets/images/menu/latte/menu02_img12.png"
-  },
-  {
-    "id": 24,
-    "menuName": "아이스 아메리카노",
-    "menuPrice": 2300,
-    "menuType": "latte",
-    "menuNew": 0,
-    "menuImg": "src/assets/images/menu/latte/menu02_img13.png"
-  },
-  {
-    "id": 25,
-    "menuName": "아이스 아메리카노",
-    "menuPrice": 2300,
-    "menuType": "latte",
-    "menuNew": 0,
-    "menuImg": "src/assets/images/menu/latte/menu02_img14.png"
-  },
-  {
     "id": 26,
-    "menuName": "아이스 아메리카노",
+    "menuName": "달고나 라떼",
     "menuPrice": 2300,
     "menuType": "latte",
     "menuNew": 0,
     "menuImg": "src/assets/images/menu/latte/menu02_img15.png"
   },
   {
-    "id": 27,
-    "menuName": "아이스 아메리카노",
-    "menuPrice": 2300,
-    "menuType": "latte",
-    "menuNew": 0,
-    "menuImg": "src/assets/images/menu/latte/menu02_img16.png"
-  },
-  {
-    "id": 28,
-    "menuName": "아이스 아메리카노",
-    "menuPrice": 2300,
-    "menuType": "latte",
-    "menuNew": 0,
-    "menuImg": "src/assets/images/menu/latte/menu02_img17.png"
-  },
-  {
     "id": 29,
-    "menuName": "아이스 아메리카노",
+    "menuName": "딸기 라떼",
     "menuPrice": 2300,
     "menuType": "latte",
     "menuNew": 0,

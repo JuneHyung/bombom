@@ -217,5 +217,516 @@
     "shopName": "삼산점",
     "shopTel": "052-272-9989",
     "shopAddress": "울산광역시 남구 삼산중로 74번길22"
+  },
+  {
+    "id": 32,
+    "locName": "대구",
+    "shopName": "대구 오페라점",
+    "shopTel": "053-352-7091",
+    "shopAddress": "대구광역시 칠성남로 50 (대구역 오페라 더블유) 근린생활시설 119호"
+  },
+  {
+    "id": 33,
+    "locName": "대구",
+    "shopName": "대명역점",
+    "shopTel": "053-655-8171",
+    "shopAddress": "대구광역시 남구 대명로 69, 102동 106호 (대명동, 나나바루아아파트)"
+  },
+  {
+    "id": 34,
+    "locName": "대구",
+    "shopName": "서대구점",
+    "shopTel": "053-247-2423",
+    "shopAddress": "대구광역시 서구 당산로 446, 371동"
+  },
+  {
+    "id": 35,
+    "locName": "대구",
+    "shopName": "만촌네거리점",
+    "shopTel": "대구 수성구 청호로 489, 1층",
+    "shopAddress": "053-742-7207"
+  },
+  {
+    "id": 36,
+    "locName": "대구",
+    "shopName": "카톨릭병원점",
+    "shopTel": "053-263-0888",
+    "shopAddress": "대구광역시 남구 두류공원로 95"
+  },
+  {
+    "id": 37,
+    "locName": "대구",
+    "shopName": "안심점",
+    "shopTel": "053-965-1421",
+    "shopAddress": "대구광역시 안심로 389,1층 105호 (신서동)"
+  },
+  {
+    "id": 38,
+    "locName": "대구",
+    "shopName": "대구 성서점",
+    "shopTel": "053-591-9371",
+    "shopAddress": "대구광역시 달서구 성지로 88(용산동) 1층"
+  },
+  {
+    "id": 39,
+    "locName": "대구",
+    "shopName": "반야월점",
+    "shopTel": "053-964-2877",
+    "shopAddress": "대구광역시 동구 경안로 750(동호동) 102호"
+  },
+  {
+    "id": 40,
+    "locName": "대구",
+    "shopName": "시지퍼스트점",
+    "shopTel": "053-795-5666",
+    "shopAddress": "대구광역시 수성구 달구벌대로 3294 (신매동) 1동 1층 116호(신매동, 시지퍼스트)"
+  },
+  {
+    "id": 41,
+    "locName": "대구",
+    "shopName": "사월점",
+    "shopTel": "X",
+    "shopAddress": "대구광역시 수성구 성동로 41, 1층(사월동)"
+  },
+  {
+    "id": 42,
+    "locName": "울산",
+    "shopName": "만촌점",
+    "shopTel": "053-752-4376",
+    "shopAddress": "대구광역시 수성구 화랑로64"
+  },
+  {
+    "id": 43,
+    "locName": "대구",
+    "shopName": "동성로점",
+    "shopTel": "X",
+    "shopAddress": "대구광역시 중구 동성로 2(동성로 3가)"
+  },
+  {
+    "id": 44,
+    "locName": "대구",
+    "shopName": "계명대점",
+    "shopTel": "X",
+    "shopAddress": "대구광역시 달서구 계대동문로 5(신당동)"
+  },
+  {
+    "id": 45,
+    "locName": "대구",
+    "shopName": "시지점",
+    "shopTel": "X",
+    "shopAddress": "대구광역시 수성구 신매로 19길54"
+  },
+  {
+    "id": 46,
+    "locName": "전북",
+    "shopName": "익산모현점",
+    "shopTel": "X",
+    "shopAddress": "전라북도 익산시 선화로 1길 8, 1층 102호(모현동 1가)"
+  },
+  {
+    "id": 47,
+    "locName": "전북",
+    "shopName": "정읍 상동점",
+    "shopTel": "063-537-5655",
+    "shopAddress": "전라북도 정읍시 학산로 61 (상동)"
+  },
+  {
+    "id": 48,
+    "locName": "전북",
+    "shopName": "남원점",
+    "shopTel": "063-626-7252",
+    "shopAddress": "전라북도 남원시 남문로 401, 1층 101호(왕정동)"
+  },
+  {
+    "id": 49,
+    "locName": "제주",
+    "shopName": "제주동문점",
+    "shopTel": "064-756-4333",
+    "shopAddress": "제주특별자치도 제주시 동문로 97(건입동) 1층"
+  },
+  {
+    "id": 50,
+    "locName": "제주",
+    "shopName": "제주 신제주점",
+    "shopTel": "064-747-5600",
+    "shopAddress": "제주특별자치도 제주시 신대로 67(연동) 1층"
+  },
+  {
+    "id": 51,
+    "locName": "제주",
+    "shopName": "제주 외도점",
+    "shopTel": "064-745-8880",
+    "shopAddress": "제주특별자치도 제주시 우정로 21(외도일동)"
+  },
+  {
+    "id": 52,
+    "locName": "제주",
+    "shopName": "제주 성산점",
+    "shopTel": "064-782-8289",
+    "shopAddress": "제주특별자치도 서귀포시 성산읍 일주동로 4224 101호"
+  },
+  {
+    "id": 53,
+    "locName": "제주",
+    "shopName": "제주 애월점",
+    "shopTel": "X",
+    "shopAddress": "제주특별자치도 제주시 애월읍 애원로 48, 1층 201호"
+  },
+  {
+    "id": 54,
+    "locName": "제주",
+    "shopName": "삼도점",
+    "shopTel": "070-8648-3624",
+    "shopAddress": "제주특별자치도 제주시 남성로 51 (용담일동) 1층"
+  },
+  {
+    "id": 55,
+    "locName": "제주",
+    "shopName": "서홍점",
+    "shopTel": "X",
+    "shopAddress": "제주특별자치도 서귀포시 홍중로 52 (서홍동) 1층"
+  },
+  {
+    "id": 56,
+    "locName": "제주",
+    "shopName": "한북로점",
+    "shopTel": "064-752-4748",
+    "shopAddress": "제주특별자치도 제주시 한북로 132 (오등동) 1층"
+  },
+  {
+    "id": 57,
+    "locName": "제주",
+    "shopName": "서귀중앙점",
+    "shopTel": "064-733-6323",
+    "shopAddress": "제주특별자치도 서귀포시 중앙로 65 (서귀동) 1층"
+  },
+  {
+    "id": 58,
+    "locName": "충남",
+    "shopName": "아산탕정점",
+    "shopTel": "041-547-9360",
+    "shopAddress": "충남 아산시 탕정면 매곡리 1215, 108호"
+  },
+  {
+    "id": 59,
+    "locName": "충남",
+    "shopName": "충남 보령시청점",
+    "shopTel": "041-931-8859",
+    "shopAddress": "충청남도 보령시 명천로4길 21 103호, 104호(명천동)"
+  },
+  {
+    "id": 60,
+    "locName": "충남",
+    "shopName": "천안 불당점",
+    "shopTel": "041-567-8112",
+    "shopAddress": "충청남도 천안시 서북구 불당26로 77, 상가동 1층 102(불당동, 천안불당 지웰더샵)"
+  },
+  {
+    "id": 61,
+    "locName": "충남",
+    "shopName": "당진 대덕점",
+    "shopTel": "070-7585-0059",
+    "shopAddress": "충청남도 당진시 대덕1로 102, 상가동 101호 (대덕동, 당진 대덕 수청 시티프라디움 1차)"
+  },
+  {
+    "id": 62,
+    "locName": "충남",
+    "shopName": "삼산점",
+    "shopTel": "052-272-9989",
+    "shopAddress": "울산광역시 남구 삼산중로 74번길22"
+  },
+  {
+    "id": 63,
+    "locName": "충남",
+    "shopName": "금산점",
+    "shopTel": "041-751-0526",
+    "shopAddress": "충청남도 금산군 금산읍 비호로 77"
+  },
+  {
+    "id": 64,
+    "locName": "충북",
+    "shopName": "청주 수곡점",
+    "shopTel": "043-285-2590",
+    "shopAddress": "충청북도 청주시 서원구 수곡로 34, 상가2동1층 (수곡동,두진하트리움)"
+  },
+  {
+    "id": 65,
+    "locName": "충북",
+    "shopName": "청주산남점",
+    "shopTel": "043-295-8310",
+    "shopAddress": "충청북도 청주시 서원구 산남로62번길 31 (산남동) 원흥법조빌딩, 104호"
+  },
+  {
+    "id": 66,
+    "locName": "충북",
+    "shopName": "충북보은점",
+    "shopTel": "043-544-7889",
+    "shopAddress": "충청북도 보은군 보은읍 삼산로 19-2"
+  },
+  {
+    "id": 67,
+    "locName": "충북",
+    "shopName": "영동점",
+    "shopTel": "043-745-8859",
+    "shopAddress": "충청북도 영동군 영동읍 중앙로 32"
+  },
+  {
+    "id": 68,
+    "locName": "충북",
+    "shopName": "제천 세명대점",
+    "shopTel": "043-642-9790",
+    "shopAddress": "충청북도 제천시 세명로54(모산동)"
+  },
+  {
+    "id": 69,
+    "locName": "충북",
+    "shopName": "청주점",
+    "shopTel": "X",
+    "shopAddress": "충청북도 청주시 상당구 사직대로 362번길 10-2(서문동)"
+  },
+  {
+    "id": 70,
+    "locName": "전남",
+    "shopName": "무안 남악도청점",
+    "shopTel": "061-287-1120",
+    "shopAddress": "전라남도 무안군 삼향읍 남악4로 40 펠라시티 2차 202동 101-2호"
+  },
+  {
+    "id": 71,
+    "locName": "경북",
+    "shopName": "경산IC점",
+    "shopTel": "053-241-7701",
+    "shopAddress": "경상북도 경산시 진량읍 대학로 950"
+  },
+  {
+    "id": 72,
+    "locName": "경북",
+    "shopName": "경산펜타힐즈점",
+    "shopTel": "053-818-3369",
+    "shopAddress": "경상북도 경산시 펜타힐즈2로 41(중산동) 1층 116호 (화성빌딩)"
+  },
+  {
+    "id": 73,
+    "locName": "경북",
+    "shopName": "하양 공설시장점",
+    "shopTel": "053-857-4689",
+    "shopAddress": "경상북도 경산시 하양읍 조산천동길 56 1층"
+  },
+  {
+    "id": 74,
+    "locName": "경북",
+    "shopName": "경산 자인점",
+    "shopTel": "053-857-0488",
+    "shopAddress": "경상북도 경산시 자인면 일연로 67"
+  },
+  {
+    "id": 75,
+    "locName": "경북",
+    "shopName": "구미 도개점",
+    "shopTel": "054-474-9777",
+    "shopAddress": "경상북도 구미시 도개면 도안로 115-1 1층"
+  },
+  {
+    "id": 76,
+    "locName": "경북",
+    "shopName": "구미금오파크점",
+    "shopTel": "010-3743-5513",
+    "shopAddress": "경상북도 구미시 새마을로3길 7-3, 1층 (사곡동)"
+  },
+  {
+    "id": 77,
+    "locName": "경북",
+    "shopName": "경산봉회점",
+    "shopTel": "053-217-0788",
+    "shopAddress": "경상북도 경산시 진량읍 공단로 579, B동"
+  },
+  {
+    "id": 78,
+    "locName": "경북",
+    "shopName": "포항두호점",
+    "shopTel": "054-253-5603",
+    "shopAddress": "경상북도 포항시 북구 대곡로 52 (두호동) 1층 102호 (영성빌딩)"
+  },
+  {
+    "id": 79,
+    "locName": "경북",
+    "shopName": "안동대점",
+    "shopTel": "054-821-0604",
+    "shopAddress": "경상북도 안동시 송천2길 87 (송천동)"
+  },
+  {
+    "id": 80,
+    "locName": "경북",
+    "shopName": "군위점",
+    "shopTel": "054-383-0709",
+    "shopAddress": "경상북도 군위군 군위읍 중앙길 98 (서부리)"
+  },
+  {
+    "id": 81,
+    "locName": "경북",
+    "shopName": "경산옥곡점",
+    "shopTel": "053-801-1470",
+    "shopAddress": "경상북도 경산시 경산로 48 (옥곡동) 103호 (한일유앤아이아파트 상가동)"
+  },
+  {
+    "id": 82,
+    "locName": "경북",
+    "shopName": "포항 효자점",
+    "shopTel": "054-278-1533",
+    "shopAddress": "경상북도 포항시 남구 효성로 48, 1층 101호(효자동)"
+  },
+  {
+    "id": 83,
+    "locName": "경북",
+    "shopName": "경산 하양점",
+    "shopTel": "053-851-0233",
+    "shopAddress": "경상북도 경산시 하양읍 하양로 63"
+  },
+  {
+    "id": 84,
+    "locName": "경북",
+    "shopName": "구미 원평점",
+    "shopTel": "053-444-9189",
+    "shopAddress": "경상북도 구미시 문화로 36-1(원평동)"
+  },
+  {
+    "id": 85,
+    "locName": "경남",
+    "shopName": "창원 상곡점",
+    "shopTel": "055-232-3332",
+    "shopAddress": "경상남도 창원시 마산회원구 내서읍 상곡로 46 , 1층 108호"
+  },
+  {
+    "id": 86,
+    "locName": "경남",
+    "shopName": "진주 이현웰가점",
+    "shopTel": "055-747-0488",
+    "shopAddress": "경상남도 진주시 진주대로 1319, 상가동 1층 111호(이현동, 이현하이클래스웰가)"
+  },
+  {
+    "id": 87,
+    "locName": "경남",
+    "shopName": "창원상남점",
+    "shopTel": "055-263-1333",
+    "shopAddress": "경상남도 창원시 성산구 중앙대로100번길 14 1층 118호(상남동)"
+  },
+  {
+    "id": 88,
+    "locName": "경남",
+    "shopName": "양산 평산점",
+    "shopTel": "055-385-9005",
+    "shopAddress": "경상남도 양산시 평산남4길 3(평산동)"
+  },
+  {
+    "id": 89,
+    "locName": "경남",
+    "shopName": "마산 회성시장점",
+    "shopTel": "055-299-2255",
+    "shopAddress": "경상남도 창원시 마산회원구 회성시장2길 74(회성동) 1층"
+  },
+  {
+    "id": 90,
+    "locName": "경남",
+    "shopName": "창원 반지점",
+    "shopTel": "055-604-1854",
+    "shopAddress": "창원 성산구 반지동 73-6"
+  },
+  {
+    "id": 91,
+    "locName": "경남",
+    "shopName": "창원대동점",
+    "shopTel": "X",
+    "shopAddress": "경상남도 창원시 성산구 원이대로 730, 1층(상남동, 대동백화점)"
+  },
+  {
+    "id": 92,
+    "locName": "경남",
+    "shopName": "창원 북면감계점",
+    "shopTel": "055-255-2810",
+    "shopAddress": "경상남도 창원시 의창구 북면 감계로110번길 54-19 제1층 105호 (한서주차빌딩)"
+  },
+  {
+    "id": 93,
+    "locName": "경남",
+    "shopName": "통영죽림점",
+    "shopTel": "070-4647-2189",
+    "shopAddress": "경상남도 통영시 광도면 죽림5로 56, 주영더팰리스5차아파트 524동 301호"
+  },
+  {
+    "id": 94,
+    "locName": "경남",
+    "shopName": "창원동읍점",
+    "shopTel": "055-293-6300",
+    "shopAddress": "경상남도 창원시 의창구 동읍 동읍로 6-1 (용잠리) 1층 1호"
+  },
+  {
+    "id": 95,
+    "locName": "경남",
+    "shopName": "진주대안점",
+    "shopTel": "055-746-1008",
+    "shopAddress": "경상남도 진주시 촉석로185번길 12-1 (평안동)"
+  },
+  {
+    "id": 96,
+    "locName": "경남",
+    "shopName": "거제장평점",
+    "shopTel": "X",
+    "shopAddress": "경남 거제시 장평3로7길 19, (장평동)"
+  },
+  {
+    "id": 97,
+    "locName": "경남",
+    "shopName": "삼천포점",
+    "shopTel": "055-832-2525",
+    "shopAddress": "경상남도 사천시 남일로 13, 1층(동금동)"
+  },
+  {
+    "id": 98,
+    "locName": "부산",
+    "shopName": "범천점",
+    "shopTel": "051-632-5788",
+    "shopAddress": "부산광역시 부산진구 범일로154번길 33,1층 1019호 (범천동, 범일역풍림아이원)"
+  },
+  {
+    "id": 99,
+    "locName": "부산",
+    "shopName": "구서점",
+    "shopTel": "X",
+    "shopAddress": "부산광역시 금정구 구서로 14, 1층(구서동,태명제1빌딩)"
+  },
+  {
+    "id": 100,
+    "locName": "부산",
+    "shopName": "부산 초량점",
+    "shopTel": "051-441-4273",
+    "shopAddress": "부산광역시 동구 초량중로 92-2 (초량동) 1층"
+  },
+  {
+    "id": 101,
+    "locName": "부산",
+    "shopName": "부산 사직점",
+    "shopTel": "051-506-5004",
+    "shopAddress": "부산광역시 동래구 아시아드대로134번길 14 (사직동) 상가3동 1층 105, 106호 (쌍용더플래티넘사직아시아드아파트)"
+  },
+  {
+    "id": 102,
+    "locName": "부산",
+    "shopName": "해운대점",
+    "shopTel": "051-743-4005",
+    "shopAddress": "부산광역시 해운대구 중동1로 33-1 (중동)"
+  },
+  {
+    "id": 103,
+    "locName": "부산",
+    "shopName": "대연역점",
+    "shopTel": "051-611-2936",
+    "shopAddress": "부산광역시 남구 수영로 253"
+  },
+  {
+    "id": 104,
+    "locName": "부산",
+    "shopName": "장전점",
+    "shopTel": "051-516-3137",
+    "shopAddress": "부산광역시 금정구 금정로 151,1층(장전동)"
   }
 ]
