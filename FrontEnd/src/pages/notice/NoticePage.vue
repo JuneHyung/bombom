@@ -20,15 +20,15 @@
             <td>{{ item.noticeDate }}</td>
             <td>{{ item.noticeView }}</td>
             <td>
-              <MdiIcon name="mdi-eye-outline" @click="getNoticeDetail(item.id)"></MdiIcon>
+              <MdiIcon name="mdiEyeOutline" @click="getNoticeDetail(item.id)"></MdiIcon>
               <MdiIcon
-                name="mdi-pencil"
+                name="mdiPencil"
                 class="bb-mx-sm"
                 @click="modifyNotice(item.id)"
                 v-if="userStore.userInfo.isAdmin"
               ></MdiIcon>
               <MdiIcon
-                name="mdi-trash-can-outline"
+                name="mdiTrashCanOutline"
                 @click="deleteNotice(item.id)"
                 v-if="userStore.userInfo.isAdmin"
               ></MdiIcon>

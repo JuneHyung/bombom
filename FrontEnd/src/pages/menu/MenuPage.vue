@@ -53,6 +53,4 @@ onMounted(async ()=>{
   await getAllMenuTypeList();
   await getMenuListByMenuType(menuTypeList.value[curIdx.value]);
 })
-
-
 </script>
