@@ -13,13 +13,13 @@
     "src/**/*.vue",
     "src/types/*.d.ts"
   ],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "allowJs": true,
-    "forceConsistentCasingInFileNames": false,
+    "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
-    
   },
   
 }
