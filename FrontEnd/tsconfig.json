@@ -20,6 +20,7 @@
     "isolatedModules": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
+    "moduleResolution": "node"
   },
-  
+  "typeRoots": ["./node_modules/@types", "types"]
 }
