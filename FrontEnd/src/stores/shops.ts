@@ -15,7 +15,6 @@ export const useShopStore = defineStore('shop-store', () => {
 
   const displayShopList = computed(() => {
     // 보여질 테이블리스트
-    console.log('asdf')
     return pageIdx.value * maxCnt + maxCnt < shopList.value.length
       ? shopList.value.slice(pageIdx.value * maxCnt, pageIdx.value * maxCnt + maxCnt)
       : shopList.value.slice(pageIdx.value * maxCnt)
@@ -44,7 +43,6 @@ export const useShopStore = defineStore('shop-store', () => {
     numList.value = Array.from({ length: num }, (_, i) => i + 1)
     typeIdx.value = locTypeList.value.indexOf(locName)
     pageIdx.value = 0
-    console.log(shopMapList.value)
   }
 
   const changePageIdx = (idx: number) => {

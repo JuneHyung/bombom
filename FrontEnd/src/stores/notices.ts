@@ -6,29 +6,29 @@ import Swal from 'sweetalert2';
 
 
 export const useNoticeStore = defineStore('notice-store', () => {
-  const curIdx = ref(0)
+  const pageIdx = ref(0)
   const noticeId = ref(0)
   const noticeList: Ref<NoticeList> = ref([])
   const maxCnt = 10;
   const numList:Ref<number[]> = ref([]);
 
   const displayNoticeList:ComputedRef<NoticeList> = computed(() =>
-    curIdx.value * maxCnt + maxCnt <= noticeList.value.length
-      ? noticeList.value.slice(curIdx.value * maxCnt, curIdx.value * maxCnt + maxCnt)
-      : noticeList.value.slice(curIdx.value * maxCnt)
+    pageIdx.value * maxCnt + maxCnt <= noticeList.value.length
+      ? noticeList.value.slice(pageIdx.value * maxCnt, pageIdx.value * maxCnt + maxCnt)
+      : noticeList.value.slice(pageIdx.value * maxCnt)
   )
-  const getCurIdx = () => curIdx.value
+  const getPageIdx = () => pageIdx.value
   const getNoticeId = () => noticeId.value
   const getNoticeList = () => noticeList.value;
   const getNumList = () => numList.value
   const getDisplayNoticeList = () => displayNoticeList.value;
 
   
-  const setCurIdx = async (idx: number) => {
+  const changePageIdx = async (idx: number) => {
     const end = Math.ceil(noticeList.value.length / maxCnt)
-    if (idx < 0) curIdx.value = idx + 1
-    else if (idx < end) curIdx.value = idx
-    else curIdx.value = idx - 1
+    if (idx < 0) pageIdx.value = idx + 1
+    else if (idx < end) pageIdx.value = idx
+    else pageIdx.value = idx - 1
   }
   const setNoticeId = async (idx: number) => {
     noticeId.value = idx
@@ -37,7 +37,7 @@ export const useNoticeStore = defineStore('notice-store', () => {
   const getAllNoticesList = async () => {
     const data = await getAllNotices()
     noticeList.value = data
-    curIdx.value = 0
+    pageIdx.value = 0
     const num = Math.ceil(data.length / maxCnt);
     numList.value = Array.from({ length: num }, (_, i) => i + 1)
   }
@@ -62,13 +62,13 @@ export const useNoticeStore = defineStore('notice-store', () => {
 
 
   return {
-    getCurIdx,
+    getPageIdx,
     getNoticeId,
     getNumList,
     getNoticeList,
     getDisplayNoticeList,
 
-    setCurIdx,
+    changePageIdx,
     setNoticeId,
 
     getAllNoticesList,

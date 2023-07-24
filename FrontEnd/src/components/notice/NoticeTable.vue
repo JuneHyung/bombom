@@ -1,10 +1,6 @@
 <template>
   <table>
-    <thead>
-      <template v-for="(hLabel, idx) in headLabelList" :key="idx">
-        <th>{{ hLabel }}</th>
-      </template>
-    </thead>
+    <TableHeader :list="headLabelList"></TableHeader>
     <tbody v-if="noticeStore.getNoticeList().length !== 0">
       <template v-for="item in noticeStore.getDisplayNoticeList()" :key="item">
         <tr>
@@ -33,22 +29,12 @@
       <TableNoData></TableNoData>
     </tbody>
   </table>
-  <ul class="pagenate-list">
-    <li class="pagenate-item" @click="noticeStore.setCurIdx(noticeStore.getCurIdx() - 1)">prev</li>
-    <template v-for="(num, idx) in noticeStore.getNumList()" :key="idx">
-      <li
-        class="pagenate-item"
-        :class="{ 'active-number': idx === noticeStore.getCurIdx() }"
-        @click="noticeStore.setCurIdx(idx)"
-      >
-        {{ num }}
-      </li>
-    </template>
-    <li class="pagenate-item" @click="noticeStore.setCurIdx(noticeStore.getCurIdx() + 1)">next</li>
-  </ul>
+  <PagenateBar type="notice"></PagenateBar>
 </template>
 <script setup lang="ts">
+import TableHeader from '@/components/common/table/TableHeader.vue'
 import TableNoData from '@/components/common/table/TableNoData.vue'
+import PagenateBar from '@/components/common/table/PagenateBar.vue'
 import MdiIcon from '@/components/common/MdiIcon.vue'
 import { useUserStore } from '@/stores/user'
 import { useNoticeStore } from '@/stores/notices'
